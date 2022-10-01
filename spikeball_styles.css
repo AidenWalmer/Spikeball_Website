@@ -1,18 +1,53 @@
-header{
+/* Header Attributes */
+header {
     text-align: center;
     font-size: 25px;
-    padding: 30px;
-    background-color: yellow;
+    padding: 5px;
+    background-color: #FFEA00;
 }
 
-main{
-    padding: 200px;
+/* Tabs Attributes */
+.row div {
+    border: solid 1px;
+}
+
+/* Tabs Modifiers */
+.row div:hover {
+    color: #5CB8E4;
+}
+
+/* Main Attributes */
+main {
+    padding: 25px;
     text-align: center;
+    background-image: linear-gradient(to right, red, orange);  
 }
 
-footer{
+/* Div Attributes */ 
+.basic_info {
+    background-color: lightyellow;     
+    width: 500px;
+    height: 430px;
+    border: solid 1px;
+    border-radius: 7px;             /* add border curvature */
+    margin: auto;                   /* center div */
+    padding-top: 5px;               /* add extra white space between header and div */
+}
+
+
+#description {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#club_email:hover {
+    color: #5CB8E4;
+}
+
+/* Footer Attributes */
+footer {
     justify-content: baseline;
     text-align: center;
     padding: 15px;
-    background-color: yellow;
+    background-color: #FFEA00;
 }
