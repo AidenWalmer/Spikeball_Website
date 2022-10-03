@@ -1,9 +1,24 @@
+/* TODO: Add two "action" shots of spikeball club on campus
+*  TODO: Create Etown Spikeball Club Logo to put at the top left and right of the page
+*/
+
 /* Header Attributes */
 header {
     text-align: center;
     font-size: 25px;
-    padding: 5px;
+    padding-top: 5px;
     background-color: #FFEA00;
+}
+
+header div.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.col-sm {
+    background-color: lightyellow;   
+    width: 500px;
 }
 
 /* Tabs Attributes */
@@ -20,7 +35,7 @@ header {
 main {
     padding: 25px;
     text-align: center;
-    background-image: linear-gradient(to right, red, orange);  
+    background-image: linear-gradient(to top, black, gray);   
 }
 
 /* Div Attributes */ 
