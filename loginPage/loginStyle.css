@@ -1,0 +1,73 @@
+/* Background Attributes */
+body {
+    background-image: linear-gradient(to right, aqua , #BF40BF);
+}
+
+/* Div Attributes */ 
+div {
+    background-color: white;     
+    width: 250px;
+    height: 375px;
+
+    border-radius: 7px;             /* add border curvature */
+    margin: auto;                   /* center div */
+    margin-top: 140px;              /* add extra space from top of page (center to screen) */
+
+    padding-bottom: 10px;           /* add extra white space between button and div border */
+    padding-left: 50px;             
+    padding-right: 50px;
+}
+
+/* Login Header Attributes */
+h1 {
+    font-family: Tahoma, Verdana, sans-serif;
+    text-align: center;             /* center h1 text */
+    padding-top: 40px;              /* add extra space between top of the oage and LOGIN */
+    margin-bottom: 30px;            /* add extra space between LOGIN and username box */
+}
+
+/* Input Boxes Attributes */
+input {
+    font-family: Tahoma, Verdana, sans-serif;
+    width: 225px;                   /* width of the input boxes */
+    padding: 10px;                  /* white space between input text and border */ 
+}
+
+/* Username and Password label Attributes */
+label {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 13px;                
+}
+
+/* Hyperlink Attributes */
+#member {
+    margin: auto;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 13px;
+    padding-left: 51px;
+}
+
+/* HyperLink Modifyers */
+a:link {
+    color: black;
+} 
+a:hover {
+    color: #5CB8E4;
+}
+
+/* Button Attributes */
+button {
+    color: white;
+    font-size: 12px;
+    font-weight: bold; 
+    text-align: center;
+    border-radius: 18px;            
+    width: 250px;
+    padding: 10px;
+    background-image: linear-gradient(to right, cyan, #BF40BF);  
+} 
+
+/* Button Modifyers */
+button:hover {
+    background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);  
+} 

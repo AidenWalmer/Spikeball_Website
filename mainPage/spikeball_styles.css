@@ -5,28 +5,41 @@
 *  TODO: Tab 3) Link to and create a login page, that will then direct you to the club members page
 *                                       ^ Login as Member (button option) and actual login for cabinet members 
 *  U: Smashorpass     P: spookball4life
+* background-image: linear-gradient(to top, white, lightsteelblue);  (nice color pallete for login page)
 */ 
 
 /* Header Attributes */
 header {
     text-align: center;
     font-size: 25px;
-    padding-top: 5px;
-    background-color: #FFEA00;
+    background-color: #0F52BA;
+    padding-top: 35px;                /* Space between top of page and title */
+}
+/* #FBEC5D */
+
+#title {
+    background-color: #0F52BA;  
+    color: white;
+    text-shadow: 1px 1px black;
+    display: inline;
+    padding: 3px;                     
 }
 
+/* Tabs Attributes */
 header div.row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-top: 34px;                 /* Space between title and tabs */ 
 }
 
+/* Individual Tab Attributes */
 .col-sm {
-    background-color: lightyellow;   
+    background-color: lightyellow;
     width: 1000px;                      /* Make tabs reach across the entire length of the screen */
 }
 
-/* Tabs Attributes */
+/* Tabs Border */
 .row div {
     border: solid 1px;
 }
@@ -38,13 +51,13 @@ header div.row {
 
 /* Main Attributes */
 main {
-    padding: 25px;
+    padding-top: 30px;
     text-align: center;
-    background-image: linear-gradient(to top, black, gray);   
+    background-image: linear-gradient(to top, #000080, lightsteelblue);  
 }
 
 /* Div Attributes */ 
-.basic_info {
+.basic_info { 
     background-color: lightyellow;     
     width: 500px;
     height: 430px;
@@ -69,5 +82,6 @@ footer {
     justify-content: baseline;
     text-align: center;
     padding: 15px;
-    background-color: #FFEA00;
+    background-color: #000080;
+    color: white;
 }
