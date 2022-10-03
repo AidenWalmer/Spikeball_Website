@@ -1,5 +1,5 @@
 /* TODO: Add two "action" shots of spikeball club on campus
-*  TODO: Create Etown Spikeball Club Logo to put at the top left and right of the page
+*  TODO: Create Etown Spikeball Club ogo to put at the top left and right of the page
 */
 
 /* Header Attributes */
@@ -18,7 +18,7 @@ header div.row {
 
 .col-sm {
     background-color: lightyellow;   
-    width: 500px;
+    width: 1000px;                      /* Make tabs reach across the entire length of the screen */
 }
 
 /* Tabs Attributes */
