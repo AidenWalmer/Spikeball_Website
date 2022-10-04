@@ -14,6 +14,7 @@ function init() {
     membersTabElm.addEventListener('click', linkLoginPage);         // on click, take to specified page
 }
 
+// DOES NOT WORK!!! Links to empty page?
 function linkPlayPage() {
     window.location.href = "C:\Users\Aiden\OneDrive - Elizabethtown College\Web Development\Spikeball_Website\playPage\play.html";
 }
@@ -22,6 +23,7 @@ function linkRoundnetRules() {
     window.location.href = "https://tournaments.spikeball.com/pages/2021-official-rules";
 }
 
+// DOES NOT WORK!!! Links to empty page?
 function linkLoginPage() {
     window.location.href = "C:\Users\Aiden\OneDrive - Elizabethtown College\Web Development\Spikeball_Website\loginPage\login.html";
 }
