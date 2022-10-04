@@ -9,7 +9,7 @@ window.addEventListener('load', init);    // when window is loaded, it will call
 function init() {
  
     let btnElement = document.querySelector('button');      // select the button by query
-    btnElement.addEventListener('click', login);            // handles the button click event 
+    btnElement.addEventListener('click', login);            // on button click, redirect to adminMembersPage
  
     /* Button Color Changes */
     btnElement.addEventListener('mousemove', () => {        // when hovering over the button, perform hover color change
