@@ -88,3 +88,7 @@ footer {
     background-color: #000080;
     color: white;
 }
+
+body{
+    margin: 0%; /*this eliminated the small white boreder that surrounds the page */
+}
