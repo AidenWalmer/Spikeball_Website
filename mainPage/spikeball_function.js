@@ -16,7 +16,7 @@ function init() {
 
 // DOES NOT WORK!!! Links to empty page?
 function linkPlayPage() {
-    window.location.href = "C:\Users\Aiden\OneDrive - Elizabethtown College\Web Development\Spikeball_Website\playPage\play.html";
+    window.location.href = "https://spikeball.com/pages/how-to-play-1";
 }
 
 function linkRoundnetRules() {
