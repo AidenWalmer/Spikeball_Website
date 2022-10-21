@@ -13,7 +13,7 @@ header {
     text-align: center;
     background-color: white;
     border: 1px solid black;
-    padding: 3px;
+    padding: 3px; 
     margin-bottom: 20px;            /* Extra space between search bar and table */
 }
 
