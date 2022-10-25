@@ -70,4 +70,5 @@ button {
 /* Button Modifyers */
 button:hover {
     background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);  
+    border-color: #36454F; 
 } 
