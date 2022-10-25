@@ -3,8 +3,8 @@ body {
     background-image: linear-gradient(to right, aqua , #BF40BF);
 }
 
-/* Div Attributes */ 
-div {
+/* Main Div Attributes */ 
+#main {
     background-color: white;     
     width: 250px;
     height: 375px;
@@ -72,3 +72,23 @@ button:hover {
     background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);  
     border-color: #36454F; 
 } 
+
+/* Error Div Attributes */
+#errorDiv {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
+/* Error Div Horizontal Line Attributes */
+#errorHr {
+    margin-top: 0px;
+    border-color: red;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
