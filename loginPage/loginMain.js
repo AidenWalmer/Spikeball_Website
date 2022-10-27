@@ -30,10 +30,11 @@ function init() {
  * Arguments: username and password 
 */
 function login(username, password) {
-    var storedPassword = 'spookball4life'
-    if (username != "") {
+    var storedUsername = 'spikeAdmin';
+    var storedPassword = 'spookball4life';
+
+    if (username == storedUsername)
         return password == storedPassword;
-    }
 }
 
 /* If login successful, transfer user to new page
@@ -41,11 +42,11 @@ function login(username, password) {
  */
 function loginStatus() {
     if (loggedIn) {
-        alert('You logged in!')
-        // window.location.href = "";           ADD LINK TO ADMIN VERSION OF MEMBERS PAGE
+        alert('You logged in!');
+        window.location.href = "memberspage.html";  // ADD LINK TO ADMIN VERSION OF MEMBERS PAGE!!!!!!!!!!!!!!!!!!
     }
     else {
-        console.log('You are not logged in!')
+        console.log('You are not logged in!');
 
         // Error Message reveal
         errorDiv.classList.remove("hidden");

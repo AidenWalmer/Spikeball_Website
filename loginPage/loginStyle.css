@@ -1,6 +1,7 @@
 /* Background Attributes */
 body {
-    background-image: linear-gradient(to right, aqua , #BF40BF);
+    /* background-image: linear-gradient(to right, aqua , #BF40BF);  CYAN TO MAGENTA GRADIENT */
+    background-image: linear-gradient(to right, aqua , #000080);
 }
 
 /* Main Div Attributes */ 
@@ -61,15 +62,18 @@ button {
     font-size: 12px;
     font-weight: bold; 
     text-align: center;
+    border: 2px solid black;
     border-radius: 18px;            
     width: 250px;
     padding: 10px;
-    background-image: linear-gradient(to right, cyan, #BF40BF);  
+    /* background-image: linear-gradient(to right, cyan, #BF40BF);  CYAN TO MAGENTA GRADIENT */ 
+    background-image: linear-gradient(to right, aqua , #000080);
 } 
 
 /* Button Modifyers */
 button:hover {
-    background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);  
+    /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);  LIGHTER HUE CYAN TO MAGENTA GRADIENT */
+    background-image: linear-gradient(to right, #7DF9FF , #1034A6);  
     border-color: #36454F; 
 } 
 
