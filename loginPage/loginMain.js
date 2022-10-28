@@ -55,7 +55,7 @@ function loginStatus() {
         // Red styliziation around username/password field 
         var style = document.createElement('style');
         style.innerHTML = ` 
-        #usernameLabel, #passwordLabel, #username::placeholder, #password::placeholder {
+        #username::placeholder, #password::placeholder {
             color: red;
         }
         
