@@ -89,7 +89,7 @@ button:focus {
 }
 
 /* Error Div Attributes */
-#bothErrorDiv, #usernameErrorDiv, #passwordErrorDiv {
+#errorDiv {
     color: red;
     font-weight: bold;
     text-align: center;
