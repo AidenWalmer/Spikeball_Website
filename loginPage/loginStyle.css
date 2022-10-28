@@ -62,8 +62,14 @@ button {
     font-size: 12px;
     font-weight: bold; 
     text-align: center;
-    border: 2px solid black;
-    border-radius: 18px;            
+
+    border: 2px solid black; 
+    border-radius: 18px;
+
+    outline: 2px solid black ;
+    transition: outline-offset 200ms ease;
+    outline-offset: -2px; 
+
     width: 250px;
     padding: 10px;
     /* background-image: linear-gradient(to right, cyan, #BF40BF);  CYAN TO MAGENTA GRADIENT */ 
@@ -77,8 +83,13 @@ button:hover {
     border-color: #36454F; 
 } 
 
+/* More Button Modifyers */
+button:focus {
+    outline-offset: 2px;
+}
+
 /* Error Div Attributes */
-#errorDiv {
+#bothErrorDiv, #usernameErrorDiv, #passwordErrorDiv {
     color: red;
     font-weight: bold;
     text-align: center;

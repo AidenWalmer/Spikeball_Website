@@ -14,13 +14,20 @@
 <body>
     <div id="main">
         <h1>Club Login</h1>
-        <div id="errorDiv" class="hidden">
-            <label>Incorrect Username or Password!<hr id="errorHr"></label>
-        </div>
-        <label>Username:</label><br>
+            <div id="usernameErrorDiv" class="hidden">
+                <label>Incorrect Username!<hr id="errorHr"></label>
+            </div>
+            <div id="passwordErrorDiv" class="hidden">
+                <label>Incorrect Password!<hr id="errorHr"></label>
+            </div>
+            <div id="bothErrorDiv" class="hidden">
+                <label>Incorrect Username and Password!<hr id="errorHr"></label>
+            </div>
+        <label id="usernameLabel">Username:</label><br>
         <input id="username" placeholder="Type your username">
-        <br><br>
-        <label>Password:</label><br>
+        <br>
+        <br>
+        <label id="passwordLabel">Password:</label><br>
         <input id="password" type="password" placeholder="Type your password">
         <br>
         <br>
