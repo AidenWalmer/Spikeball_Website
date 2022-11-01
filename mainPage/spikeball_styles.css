@@ -35,7 +35,8 @@ header div.row {
 .col-sm {
     /* background-color: lightyellow; */
     background-color: white;
-    width: 1000px;                      /* Make tabs reach across the entire length of the screen */
+    padding: 2px;                    /* Slightly more white space around each tab */ 
+    width: 34%;                      /* Make tabs reach across the entire length of the screen */
 }
 
 /* Tabs Border */
@@ -60,7 +61,7 @@ main {
     /* background-color: lightyellow; */
     background-color: white;
     width: 500px;
-    height: 500px;
+    height: 55%;
     border: solid 1px;   
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
@@ -83,7 +84,7 @@ main {
 
 /* Footer Attributes */
 footer {
-    justify-content: baseline;
+    justify-content: center;
     text-align: center;
     padding: 15px;
     background-color: #000080;
@@ -92,4 +93,34 @@ footer {
 
 body{
     margin: 0%;       /* Eliminates the small white border that surrounds the page */
+}
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    header {
+      font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    header div.row {
+      width: 100%;
+      font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .basic_info {
+      width: 95%;
+      font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    footer {
+      font-size: 13px;
+    }
 }

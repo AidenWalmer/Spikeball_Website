@@ -107,3 +107,14 @@ button:focus {
 .hidden {
     display: none;
 }
+
+body {
+    margin: 0%;
+}
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    #main {
+      width: 60%;
+    }
+}
