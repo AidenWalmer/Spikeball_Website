@@ -98,29 +98,17 @@ body{
 @media only screen and (max-width: 620px) {
     /* For mobile phones: */
     header {
-      font-size: 14px;
-    }
-}
-
-@media only screen and (max-width: 620px) {
-    /* For mobile phones: */
+        font-size: 14px;
+      }
     header div.row {
-      width: 100%;
-      font-size: 12px;
-    }
-}
-
-@media only screen and (max-width: 620px) {
-    /* For mobile phones: */
+        width: 100%;
+        font-size: 12px;
+      }
     .basic_info {
       width: 95%;
       font-size: 13px;
     }
-}
-
-@media only screen and (max-width: 620px) {
-    /* For mobile phones: */
     footer {
-      font-size: 13px;
-    }
+        font-size: 13px;
+      }
 }
