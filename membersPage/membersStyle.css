@@ -8,6 +8,14 @@ header {
     padding: 1px;                   /* Extra blue space from top and bottom of Header */
 }
 
+#title {
+    background-color: #0F52BA;  
+    color: white;
+    text-shadow: 1px 1px black;
+    display: inline;
+    padding: 3px;                     
+}
+
 /* Search Bar Attributes */
 #searchBar {
     text-align: center;
@@ -87,6 +95,6 @@ body {
     
     footer {
         font-size: 12px;
-      }
+    }
 }
 

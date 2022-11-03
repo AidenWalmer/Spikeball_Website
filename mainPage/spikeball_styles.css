@@ -15,6 +15,11 @@ header {
     padding-top: 35px;                /* Space between top of page and title */
 }
 
+#spikeballLogo {
+    width: 155px;       
+    height: 160px; 
+}
+
 #title {
     background-color: #0F52BA;  
     color: white;
@@ -23,8 +28,8 @@ header {
     padding: 3px;                     
 }
 
-/* Tabs Attributes */
-header div.row {
+/* Tabs Div Attributes */
+header div.tabs {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -40,12 +45,12 @@ header div.row {
 }
 
 /* Tabs Border */
-.row div {
+.tabs div {
     border: solid 1px;
 }
 
 /* Tabs Modifiers */
-.row div:hover {
+.tabs div:hover {
     color: #5CB8E4;
 }
 
@@ -111,4 +116,7 @@ body{
     footer {
         font-size: 13px;
       }
+    /* img {
+
+    } */
 }
