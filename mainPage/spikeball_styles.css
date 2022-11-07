@@ -54,6 +54,19 @@ header div.tabs {
     color: #5CB8E4;
 }
 
+/* stlye for members button */
+#membersTab a {
+    padding-left: 33%;
+    padding-right: 33%;
+    text-decoration: none;
+    color: black;
+    
+}
+#membersTab a:hover {
+    color: #5CB8E4;
+    
+}
+
 /* Main Attributes */
 main {
     padding-top: 30px;
