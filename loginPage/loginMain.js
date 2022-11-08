@@ -6,6 +6,7 @@
 
 window.addEventListener('load', init);    // when window is loaded, it will call init
 var loggedIn = false;
+var sessionAdmin = false;
 
 function init() {
  
@@ -31,8 +32,8 @@ function init() {
  * If login unsuccessful, display the correct error message
  */
 function login(username, password) {
-    var storedUsername = 'spikeAdmin';
-    var storedPassword = 'spookball4life';
+    var storedUsername = 'spikeballclub'; 
+    var storedPassword = 'spookball4life'; 
 
     console.log(username);
     console.log(password);
@@ -45,6 +46,7 @@ function login(username, password) {
 function loginStatus() {
     if (loggedIn) {
         alert('You logged in!');
+        sessionAdmin = true;
         window.location.href = "membersPage/members.html";  // ADD LINK TO ADMIN VERSION OF MEMBERS PAGE!!!!!!!!!!!!!!!!!!
     }
     else {

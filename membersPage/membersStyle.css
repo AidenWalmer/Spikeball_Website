@@ -73,6 +73,16 @@ body {
     background-image: linear-gradient(to top, #000080, lightsteelblue);  
 }
 
+/* Admin Only */
+.hidden {
+    display: none;
+}
+
+#adminBtns {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 620px) {
     /* For mobile phones: */
     header {
@@ -95,6 +105,9 @@ body {
     
     footer {
         font-size: 12px;
+    }
+    #adminBtns {
+        
     }
 }
 
