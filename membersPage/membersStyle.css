@@ -83,6 +83,11 @@ body {
     margin-bottom: 20px;
 }
 
+#deleteBtn {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 @media only screen and (max-width: 620px) {
     /* For mobile phones: */
     header {
@@ -105,9 +110,6 @@ body {
     
     footer {
         font-size: 12px;
-    }
-    #adminBtns {
-        
     }
 }
 
