@@ -47,7 +47,7 @@ function loginStatus() {
     if (loggedIn) {
         alert('You logged in!');
         sessionAdmin = true;
-        window.location.href = "membersPage/members.html";  // ADD LINK TO ADMIN VERSION OF MEMBERS PAGE!!!!!!!!!!!!!!!!!!
+        window.location.href = "Spikeball_Website\membersPage\members.html";  // ADD LINK TO ADMIN VERSION OF MEMBERS PAGE!!!!!!!!!!!!!!!!!!
     }
     else {
         console.log('Incorrect username and password!');
