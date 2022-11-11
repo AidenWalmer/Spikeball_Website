@@ -23,7 +23,7 @@ function linkRoundnetRules() {
     window.location.href = "https://tournaments.spikeball.com/pages/2021-official-rules";
 }
 
-// DOES NOT WORK!!! Links to empty page?//I dont think this will work because i think its using the href as a url rather than a file path? maybe
+// DOES NOT WORK!!! I dont think this will work because i think its using the href as a url rather than a file path? maybe
 function linkLoginPage() {
     window.location.href = "C:\Users\Aiden\OneDrive - Elizabethtown College\Web Development\Spikeball_Website\loginPage\login.html";
 }

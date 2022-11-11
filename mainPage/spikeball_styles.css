@@ -1,12 +1,3 @@
-/* TODO: Add two "action" shots of spikeball club on campus
-*  TODO: Create Etown Spikeball Club Logo to put at the top left and right of the page
-*  TODO: Tab 1) Link to and create a How to Play page
-*  TODO: Tab 2) Link to Official Roundnet Rules page
-*  TODO: Tab 3) Link to and create a login page, that will then direct you to the club members page
-*                                       ^ Login as Member (button option) and actual login for cabinet members 
-*  U: Smashorpass     P: spookball4life
-*/ 
-
 /* Header Attributes */
 header {
     text-align: center;
@@ -15,11 +6,7 @@ header {
     padding-top: 35px;                /* Space between top of page and title */
 }
 
-#spikeballLogo {
-    width: 155px;       
-    height: 160px; 
-}
-
+/* Title Attributes */
 #title {
     background-color: #0F52BA;  
     color: white;
@@ -54,7 +41,7 @@ header div.tabs {
     color: #5CB8E4;
 }
 
-/* stlye for members button */
+/* Style for Members Button */
 #membersTab a {
     padding-left: 33%;
     padding-right: 33%;
@@ -64,7 +51,6 @@ header div.tabs {
 }
 #membersTab a:hover {
     color: #5CB8E4;
-    
 }
 
 /* Main Attributes */
@@ -84,6 +70,12 @@ main {
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
     padding-top: 5px;               /* add extra white space between header and div */
+}
+
+/* Spikeball Club Img */
+#spikeballLogo {
+    width: 155px;       
+    height: 160px; 
 }
 
 #description {
@@ -109,7 +101,7 @@ footer {
     color: white;
 }
 
-body{
+body {
     margin: 0%;       /* Eliminates the small white border that surrounds the page */
 }
 
