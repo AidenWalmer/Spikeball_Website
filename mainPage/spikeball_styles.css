@@ -41,8 +41,8 @@ header div.tabs {
     color: #5CB8E4;
 }
 
-/* Style for Members Button */
-#membersTab a {
+/* Style for Members Button with HyperLink */
+/* #membersTab a {
     padding-left: 33%;
     padding-right: 33%;
     text-decoration: none;
@@ -51,7 +51,7 @@ header div.tabs {
 }
 #membersTab a:hover {
     color: #5CB8E4;
-}
+} */
 
 /* Main Attributes */
 main {
