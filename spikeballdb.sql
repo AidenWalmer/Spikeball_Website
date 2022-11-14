@@ -12,14 +12,14 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 USE spikeballdb;
 DROP TABLE IF EXISTS spikeballdb;
 CREATE TABLE IF NOT EXISTS spikeballdb (
-  `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `nameFirst` VARCHAR(45) NOT NULL,
-  `nameLast` VARCHAR(50) NOT NULL,
-  `startDate` DATE NOT NULL,
-  `email` VARCHAR(100) NOT NULL,
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
-  PRIMARY KEY (`id`))
+  id INTEGER NOT NULL AUTO_INCREMENT,
+  nameFirst VARCHAR(50) NOT NULL,
+  nameLast VARCHAR(50) NOT NULL,
+  startDate DATE NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  UNIQUE INDEX email_UNIQUE (email ASC),
+  UNIQUE INDEX id_UNIQUE (id ASC),
+  PRIMARY KEY (id))
 ENGINE = InnoDB
 AUTO_INCREMENT = 1;
 
@@ -54,6 +54,9 @@ INSERT INTO spikeballdb(nameFirst, nameLast, startDate, email) VALUES ('Christy'
 INSERT INTO spikeballdb(nameFirst, nameLast, startDate, email) VALUES ('Jackson', 'Lager', '2022-08-31', 'lagerj@etown.edu');
 INSERT INTO spikeballdb(nameFirst, nameLast, startDate, email) VALUES ('Jaden', 'Thomas', '2022-09-01', 'thomasj3@etown.edu');
 INSERT INTO spikeballdb(nameFirst, nameLast, startDate, email) VALUES ('Evan', 'Carneal', '2022-09-01', 'carneale@etown.edu');
+INSERT INTO spikeballdb(nameFirst, nameLast, startDate, email) VALUES ('Hannah', 'Lewiski', '2022-11-11', 'lewiskih@etown.edu');
+INSERT INTO spikeballdb(nameFirst, nameLast, startDate, email) VALUES ('Christain', 'Ramos', '2022-11-11', 'ramosc@etown.edu');
+
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
