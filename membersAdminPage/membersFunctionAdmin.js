@@ -15,7 +15,7 @@ function init() {
 }
 
 function addMember() {
-
+    
 }
 
 function deleteMember() {
@@ -23,5 +23,5 @@ function deleteMember() {
 }
 
 function editMember() {
-    
+
 }
