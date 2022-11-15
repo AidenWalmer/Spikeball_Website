@@ -49,7 +49,7 @@ function loginStatus() {
         alert('You logged in!');
         console.log("Admin Session: " + loggedIn);
         // window.location.href = "http://localhost/cs310/Spikeball_Website/membersPage/members.html";
-        window.location.href = "http://localhost/cs310/Spikeball_Website/membersAdminPage/members.html";
+        window.location.href = "http://localhost/cs310/Spikeball_Website/membersAdminPage/membersAdmin.html";
     }
     else {
         console.log('Incorrect username and password!');
