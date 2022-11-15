@@ -132,10 +132,11 @@ body {
         font-size: 12px;
       }
     .basic_info {
-      width: 95%;
+      width: 90%;
       font-size: 13px;
     }
     footer {
+        padding: 15px;
         font-size: 13px;
       }
 }
