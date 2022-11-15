@@ -142,19 +142,19 @@ body {
 
 @media only screen and (max-width: 1200px) {
     /* Remove images if screensize is smaller than standard laptop */
-    #imgLeft, #imgRight {
+    #imgLeft img, #imgRight img {
         display: none;
     }
 }
 
 @media only screen and (max-width: 1300px) {
     /* If screensize is between 1200 and 1300 px, display image with different absolute position */
-    #imgLeft {
+    #imgLeft img {
         position: absolute;
         top: 45%;
         left: 2%;
     }
-    #imgRight {
+    #imgRight img {
         position: absolute;
         top: 45%;
         right: 2%;
