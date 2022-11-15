@@ -1,0 +1,14 @@
+{
+    "img1": {
+        "img": "http://localhost/cs310/Spikeball_Website/images/clubIMG1.JPG"
+    },
+    "img2": {
+        "img": "http://localhost/cs310/Spikeball_Website/images/clubIMG2.JPG"
+    },
+    "img3": {
+        "img": "http://localhost/cs310/Spikeball_Website/images/clubIMG3.JPG"
+    },
+    "img4": {
+        "img": "http://localhost/cs310/Spikeball_Website/images/clubIMG4.JPG"
+    }
+}
