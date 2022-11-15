@@ -13,3 +13,15 @@ function init() {
     let editBtn = document.getElementById("editBtn");
     editBtn.addEventListener("click", editMember);
 }
+
+function addMember() {
+    
+}
+
+function deleteMember() {
+
+}
+
+function editMember() {
+    
+}
