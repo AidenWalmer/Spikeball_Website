@@ -6,10 +6,9 @@
 
 window.addEventListener('load', init);    // when window is loaded, it will call init
 var loggedIn = false;
-var sessionAdmin = false;
 
 function init() {
- 
+    console.log("Admin session: " + loggedIn);
     let btnElement = document.querySelector('button');      // select the button by query
     btnElement.addEventListener('click', authenticate);     // on button click, redirect to adminMembersPage
  
@@ -32,8 +31,10 @@ function init() {
  * If login unsuccessful, display the correct error message
  */
 function login(username, password) {
-    var storedUsername = 'spikeballclub'; 
-    var storedPassword = 'spookball4life'; 
+    // var storedUsername = 'spikeballclub'; 
+    // var storedPassword = 'spookball4life'; 
+    var storedUsername = 'spike'; 
+    var storedPassword = 'club'; 
 
     console.log(username);
     console.log(password);
@@ -46,12 +47,15 @@ function login(username, password) {
 function loginStatus() {
     if (loggedIn) {
         alert('You logged in!');
-        sessionAdmin = true;
-        window.location.href = "Spikeball_Website\membersPage\members.html";  // ADD LINK TO ADMIN VERSION OF MEMBERS PAGE!!!!!!!!!!!!!!!!!!
+        console.log("Admin Session: " + loggedIn);
+        window.location.href = "http://localhost/cs310/Spikeball_Website/membersPage/members.html";
+        let adminBtns = document.getElementById("adminBtns");
+        adminBtns.classList.remove("hidden");
     }
     else {
         console.log('Incorrect username and password!');
         // Error Message reveal 
+        let errorDiv = document.getElementById("errorDiv");
         errorDiv.classList.remove("hidden");
 
         // Red styliziation around username/password field 

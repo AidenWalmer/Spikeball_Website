@@ -53,6 +53,23 @@ header div.tabs {
     color: #5CB8E4;
 } */
 
+/* Images */
+#imgLeft img {
+    position: absolute;
+    top: 45%;
+    left: 6%;
+    width: 300px;
+    height: 300px;
+}
+
+#imgRight img {
+    position: absolute;
+    top: 45%;
+    right: 6%;
+    width: 300px;
+    height: 300px;
+}
+
 /* Main Attributes */
 main {
     padding-top: 30px;
@@ -121,7 +138,25 @@ body {
     footer {
         font-size: 13px;
       }
-    /* img {
-
-    } */
 }
+
+@media only screen and (max-width: 1200px) {
+    /* Remove images if screensize is smaller than standard laptop */
+    #imgLeft, #imgRight {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    /* If screensize is between 1200 and 1300 px, display image with different absolute position */
+    #imgLeft {
+        position: absolute;
+        top: 45%;
+        left: 2%;
+    }
+    #imgRight {
+        position: absolute;
+        top: 45%;
+        right: 2%;
+    }
+} 
