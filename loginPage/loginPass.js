@@ -33,8 +33,8 @@ function init() {
 function login(username, password) {
     // var storedUsername = 'spikeballclub'; 
     // var storedPassword = 'spookball4life'; 
-    var storedUsername = 'spike'; 
-    var storedPassword = 'club'; 
+    var storedUsername = 'spikeballclub'; 
+    var storedPassword = 'smashorpass'; 
 
     console.log(username);
     console.log(password);
