@@ -132,13 +132,14 @@ body {
         font-size: 12px;
       }
     .basic_info {
-      width: 95%;
+      width: 90%;
       font-size: 13px;
     }
     footer {
+        padding: 15px;
         font-size: 13px;
       }
-    /* img {
+}
 
 @media only screen and (max-width: 1200px) {
     /* Remove images if screensize is smaller than standard laptop */

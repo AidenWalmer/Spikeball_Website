@@ -123,13 +123,11 @@ body {
     margin: 0%;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 400px) {
     /* For mobile phones: */
     #main {
-      width: 75%; 
-      padding-left: 8%;
-      padding-right: 8%;
-    }
+        width: 60%;  
+      }
     button {
         width: 100%;
       }
