@@ -106,7 +106,7 @@ body {
 }
 
 /* Resizing for mobile phones: */
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 500px) {
     header {
         font-size: 14px;
         padding-bottom: 30px;
@@ -125,17 +125,17 @@ body {
     }
 
     #searchBar {
-        font-size: 10px;
+        font-size: 14px;
         padding: 2px; 
       }
 
     input {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     table {
-      width: 95%;
-      font-size: 10px;
+      width: 80%;
+      font-size: 14px;
     }
     
     footer {
