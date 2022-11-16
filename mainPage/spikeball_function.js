@@ -15,33 +15,52 @@ function init() {
     let membersTabElm = document.getElementById("membersTab");      // grab the membersTab element
     membersTabElm.addEventListener('click', linkLoginPage);         // on click, take to specified page
 
-    // Call function for fetching and displaying data for random club photo
-    getJsonData();
+    // Call function for fetching and displaying data for both random club photos 
+    getJsonData1();
+    getJsonData2();
 }
 
-/* Fetches and displays JSON data for a random club photo */
-function getJsonData() {
+/* Fetches and displays JSON data for a random club photo for left side */
+function getJsonData1() {
     let url = URL + "?photoName=random";
 
     fetch(url)
       .then(checkStatus)
       .then(JSON.parse)
-      .then(loadData)
+      .then(loadData1)
       .catch(console.error);   
 }
 
+/* Fetches and displays JSON data for a random club photo for right side */
+function getJsonData2() {
+  let url = URL + "?photoName=random";
+
+  fetch(url)
+    .then(checkStatus)
+    .then(JSON.parse)
+    .then(loadData2)
+    .catch(console.error);   
+}
+
  /**
-   * Function to load the photoAPI JSON data into the page.
+   * Function to load the photoAPI JSON data into the page for left photo.
    * @param data - the data that is being returned from the API in JSON format
    */
-function loadData(data) {
+function loadData1(data) {
     let imgLeft = document.getElementById("imgLeft");
-    let imgRight = document.getElementById("imgRight");
 
     // Add the randomized image to the Left img 
     let imgL = document.createElement("img");
     imgL.src = data["img"];
     imgLeft.appendChild(imgL);
+}
+
+ /**
+   * Function to load the photoAPI JSON data into the page for right photo.
+   * @param data - the data that is being returned from the API in JSON format
+   */
+function loadData2(data) {
+    let imgRight = document.getElementById("imgRight");
 
     // Add the randomized image to the Right img 
     let imgR = document.createElement("img");
@@ -50,16 +69,15 @@ function loadData(data) {
 }
 
 function linkPlayPage() {
-    window.location.href = "https://spikeball.com/pages/how-to-play-1";
+    window.open("https://spikeball.com/pages/how-to-play-1", '_blank'); 
 }
 
 function linkRoundnetRules() {
-    window.location.href = "https://tournaments.spikeball.com/pages/2021-official-rules";
+    window.open("https://tournaments.spikeball.com/pages/2021-official-rules", '_blank'); 
 }
 
-// DOES NOT WORK!!! I dont think this will work because i think its using the href as a url rather than a file path? maybe
 function linkLoginPage() {
-    window.location.href = "http://localhost/cs310/Spikeball_Website/loginPage/login.html";
+    window.location.href = "http://localhost/cs310/Spikeball_Website/membersPage/members.html";
 }
 
  /**

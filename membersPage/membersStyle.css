@@ -33,13 +33,19 @@ header {
     padding: 3px;                     
 }
 
-/* Search Bar Attributes */
-#searchBar {
+/* Search Bar Div Attributes */
+#searchBarDiv {
     text-align: center;
     background-color: white;
     border: 1px solid black;
     padding: 5px; 
     margin-bottom: 20px;            /* Extra space between search bar and table */
+}
+
+/* Admin Login Button Attributes */
+#loginBtn {
+    position: absolute;
+    left: 18px;
 }
 
 /* Table Attributes */
@@ -88,21 +94,6 @@ body {
     margin: 0%;                     /* Eliminates the small white border that surrounds the page */
     /* background-color: lightsteelblue  */
     background-image: linear-gradient(to top, #000080, lightsteelblue);  
-}
-
-/* Admin Only */
-.hidden {
-    display: none;
-}
-
-#adminBtns {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#deleteBtn {
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 /* Resizing for mobile phones: */

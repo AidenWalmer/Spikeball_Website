@@ -41,18 +41,6 @@ header div.tabs {
     color: #5CB8E4;
 }
 
-/* Style for Members Button with HyperLink */
-/* #membersTab a {
-    padding-left: 33%;
-    padding-right: 33%;
-    text-decoration: none;
-    color: black;
-    
-}
-#membersTab a:hover {
-    color: #5CB8E4;
-} */
-
 /* Images */
 #imgLeft img {
     position: absolute;
@@ -60,6 +48,7 @@ header div.tabs {
     left: 6%;
     width: 300px;
     height: 300px;
+    filter: drop-shadow(0 0 0.75rem black);  
 }
 
 #imgRight img {
@@ -68,6 +57,7 @@ header div.tabs {
     right: 6%;
     width: 300px;
     height: 300px;
+    filter: drop-shadow(0 0 0.75rem black);            
 }
 
 /* Main Attributes */

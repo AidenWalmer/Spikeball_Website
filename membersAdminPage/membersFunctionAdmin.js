@@ -15,13 +15,13 @@ function init() {
 }
 
 function addMember() {
-    
+    console.log("Adding Member");
 }
 
 function deleteMember() {
-
+    console.log("Deleting Member");
 }
 
 function editMember() {
-
+    console.log("Editting Member");
 }
