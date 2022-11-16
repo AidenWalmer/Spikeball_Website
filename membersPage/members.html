@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="membersStyle.css">
     <script src="membersFunction.js"></script>
 
-    <!-- Listen for AdminLogin Successful and unhide Admin buttons ?!?!?!?!?!?!?!?!?!?!? -->
-    <script src="../loginPage/loginPass.js"></script>
-
 </head>
 <body>
     <div class="home">
@@ -22,17 +19,11 @@
         <h1 id="title">Club Members List</h1>
     </header>
 
-    <div id="searchBar">
+    <div id="searchBarDiv">
+        <button id="loginBtn">Admin Login</button>
         <label><b>Search for a Member:</b></label>
         <input id="memberSearch" type="text" placeholder="Type a member name">
         <br>
-    </div>
-
-    <!-- class="hidden" -->
-    <div id="adminBtns" class="hidden">    
-        <button id="addBtn">Add Member</button>
-        <button id="deleteBtn">Delete Member</button>
-        <button id="editBtn">Edit Member</button>
     </div>
 
     <table class="table table-bordered">

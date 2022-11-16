@@ -1,3 +1,8 @@
+body {
+    font-family: 'Sabon', sans-serif;
+    /* font-family: Helvetica, Arial, sans-serif; */
+}
+
 /* Header Attributes */
 header {
     text-align: center;
@@ -10,7 +15,7 @@ header {
 #title {
     background-color: #0F52BA;  
     color: white;
-    text-shadow: 1px 1px black;
+    text-shadow: 2px 2px black;
     display: inline;
     padding: 3px;                     
 }
@@ -41,18 +46,6 @@ header div.tabs {
     color: #5CB8E4;
 }
 
-/* Style for Members Button with HyperLink */
-/* #membersTab a {
-    padding-left: 33%;
-    padding-right: 33%;
-    text-decoration: none;
-    color: black;
-    
-}
-#membersTab a:hover {
-    color: #5CB8E4;
-} */
-
 /* Images */
 #imgLeft img {
     position: absolute;
@@ -60,6 +53,7 @@ header div.tabs {
     left: 6%;
     width: 300px;
     height: 300px;
+    filter: drop-shadow(0 0 0.75rem black);  
 }
 
 #imgRight img {
@@ -68,6 +62,7 @@ header div.tabs {
     right: 6%;
     width: 300px;
     height: 300px;
+    filter: drop-shadow(0 0 0.75rem black);            
 }
 
 /* Main Attributes */

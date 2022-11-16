@@ -15,13 +15,19 @@ function init() {
 }
 
 function addMember() {
-    
+    console.log("Adding Member");
+    let addForm = document.getElementById("addForm");
+    addForm.classList.remove("hidden");
 }
 
 function deleteMember() {
-
+    console.log("Deleting Member");
+    let deleteForm = document.getElementById("deleteForm");
+    deleteForm.classList.remove("hidden");
 }
 
 function editMember() {
-
+    console.log("Editting Member");
+    let editForm = document.getElementById("editForm");
+    editForm.classList.remove("hidden");
 }

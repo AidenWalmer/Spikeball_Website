@@ -1,3 +1,8 @@
+body {
+    font-family: 'Sabon', sans-serif;
+    /* font-family: Helvetica, Arial, sans-serif; */
+}
+
 /* Header Attributes */
 header {
     text-align: center;
@@ -28,7 +33,7 @@ header {
 #title {
     background-color: #0F52BA;  
     color: white;
-    text-shadow: 1px 1px black;
+    text-shadow: 2px 2px black;
     display: inline;
     padding: 3px;                     
 }
@@ -90,11 +95,7 @@ body {
     background-image: linear-gradient(to top, #000080, lightsteelblue);  
 }
 
-/* Admin Only */
-.hidden {
-    display: none;
-}
-
+/* Admin Buttons */
 #adminBtns {
     text-align: center;
     margin-bottom: 20px;
@@ -103,6 +104,44 @@ body {
 #deleteBtn {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+/* ALL Form Div Content Attributes */
+#addDiv, #deleteDiv, #editDiv {
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    position: fixed;
+    left: 550px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px #000;
+}
+
+/* ALL Form Attributes */
+form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* All Form Content Attributes */  
+form>div {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ALL Form Div Header Attributes */
+#addDiv h2, #deleteDiv h2, #editDiv h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Resizing for mobile phones: */
