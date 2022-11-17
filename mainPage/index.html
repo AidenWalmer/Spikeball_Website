@@ -37,7 +37,9 @@
                 <p id="meeting"> We meet every Friday from 4:00pm-6:00pm on Brinser Field, as long as weather permits. We will send out an email
                     to all current members notifying you if we will not be meeting.
                 </p>
+                <a href="http://localhost/cs310/Spikeball_Website/calendar/calendar.html"><img id="calendar-left" title="calendar" src="http://localhost/cs310/Spikeball_Website/images/calendar.png" alt="calendar icon"></a>
                 <img id="spikeballLogo" title="Etown Spikeball Club Logo" src="http://localhost/cs310/Spikeball_Website/images/CIRCLE_Spikeball_Logo.png" alt="Etown Spikeball Club Logo">
+                <a href="http://localhost/cs310/Spikeball_Website/calendar/calendar.html"><img id="calendar-right" title="calendar" src="http://localhost/cs310/Spikeball_Website/images/calendar.png" alt="calendar icon"></a>
                 <hr>    
                 <b>Club Officers:</b>
                 <br><br>
