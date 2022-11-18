@@ -1,4 +1,6 @@
 body {
+    margin: 0%;   /* Eliminates the small white border that surrounds the page */
+    background-image: linear-gradient(to top, #000080, lightsteelblue); 
     font-family: 'Sabon', sans-serif;
     /* font-family: Helvetica, Arial, sans-serif; */
 }
@@ -13,10 +15,10 @@ header {
     padding: 1px;                   /* Extra blue space from top and bottom of Header */
     padding-top: 35px;
     padding-bottom: 35px;           /* Space between title and search bar */ 
-}
+} 
 
 /* Home Button Attributes */
-.home {
+#home {
     position: absolute;
     top: 25px;
     left: 25px;
@@ -25,7 +27,7 @@ header {
 }
 
 /* Hiding wierd home picture elements */
-.home a {
+#home a {
     color: #0F52BA;
     text-shadow: none;  
 }
@@ -89,12 +91,6 @@ footer {
     color: white;
 }
 
-body {
-    margin: 0%;                     /* Eliminates the small white border that surrounds the page */
-    /* background-color: lightsteelblue  */
-    background-image: linear-gradient(to top, #000080, lightsteelblue);  
-}
-
 /* Admin Buttons */
 #adminBtns {
     text-align: center;
@@ -106,24 +102,50 @@ body {
     margin-right: 10px;
 }
 
-/* ALL Form Div Content Attributes */
-#addDiv, #deleteDiv, #editDiv {
+/* Add Form Div Attributes */
+#addDiv {
     width: 400px;
-    height: 300px;
+    height: 315px; 
     background-color: white;
+
+    /* Center the div to the page */
     position: fixed;
-    left: 550px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
     border-radius: 10px;
     box-shadow: 0px 0px 0px 2px #000;
+    z-index: 1;     /* Show in front of previous page content */
+} 
+
+/* Delete Form Div Attributes */
+#deleteDiv {
+    width: 400px;
+    min-height: 200px; 
+    background-color: white;
+
+    /* Center the div to the page */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px #000;
+    z-index: 1;     /* Show in front of previous page content */
 }
 
 /* ALL Form Attributes */
 form {
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    font-family: Helvetica, Arial, sans-serif;
+    /* font-family: Helvetica, Arial, sans-serif; */
 }
 
 /* All Form Content Attributes */  
@@ -140,8 +162,27 @@ form>div {
     margin: 0;
 }
 
+/* Form Div Button Attributes */
+#addDiv button, #deleteDiv button, #editDiv button {
+    width: 100px;
+    padding: 3px;
+    text-align: center;
+    margin: auto;
+}
+
+/* Hide specific page content */
 .hidden {
     display: none;
+}
+
+/* Darken the page after a button click */
+.darken {
+    filter: brightness(50%);
+}
+
+/* Disable the buttons while a form is on screen */
+.disabled{
+    pointer-events: none;
 }
 
 /* Resizing for mobile phones: */

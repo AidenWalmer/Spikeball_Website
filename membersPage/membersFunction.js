@@ -4,6 +4,15 @@ function init() {
 
     let loginBtn = document.getElementById("loginBtn")
     loginBtn.addEventListener("click", toAdminLogin);
+
+    // if (loggedIn(true)) {
+    //     console.log("Logged In")
+    //     let adminBtns = document.getElementById("adminBtns");
+    //     adminBtns.classList.remove("hidden");
+    // }
+    // else {
+    //     console.log("Not Logged In");
+    // }
 }
 
 function toAdminLogin() {

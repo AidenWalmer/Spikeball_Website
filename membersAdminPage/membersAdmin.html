@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <div class="home">
-        <a href="http://localhost/cs310/Spikeball_Website/mainPage/index.html">
+    <div id="home">
+        <a href="http://localhost/cs310/Spikeball_Website/mainPage/index.php">
             <img src="http://localhost/cs310/Spikeball_Website/images/home-big.png" alt="home icon" title="Home Button"
                 height="75px">
         </a>
@@ -29,11 +29,12 @@
     </div>
 
     <!-- Add Member Form -->
-    <div id="addDiv">
-        <form id="addForm" class="">
+    <div id="addDiv" class="hidden">
+        <form id="addForm" action="" method="post">
             <h2>Add a Member</h2>
+            <BR>
             <div>
-                <label for="fInput">First Name: </label>
+                <label for="fNameInput">First Name: </label>
                 <input id="fNameInput" type="text" pattern="[A-Z][a-z]+" placeholder="John" required>
             </div>
             <div>
@@ -52,8 +53,30 @@
             <label for="gradYear">Graduation Year: </label>
             <input id="gradYear" type="number" placeholder="2024" required>
             </div>
-            
-            <button id="submitBtn" type="submit">SUBMIT</button>
+            <div>
+            <button class="cancelBtn" type="submit">CANCEL</button>
+            <button class="submitBtn" type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Delete Member Form -->
+    <div id="deleteDiv" class="hidden">
+        <form id="deleteForm" action="" method="post">
+            <h2>Delete a Member</h2>
+            <BR>
+            <div>
+                <label for="fNameInput">First Name: </label>
+                <input id="fNameInput" type="text" pattern="[A-Z][a-z]+" placeholder="John" required>
+            </div>
+            <div>
+                <label for="lNameInput">Last Name: </label>
+                <input id="lNameInput" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" required> 
+            </div>
+            <div>
+            <button class="cancelBtn" type="submit">CANCEL</button>
+            <button class="submitBtn" type="submit">SUBMIT</button>
+            </div>
         </form>
     </div>
 
@@ -267,9 +290,6 @@
 
     <!-- footer -->
     <footer>
-        <!-- <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-    <a class="footer-link" href="https://twitter.com/">Twitter</a>
-    <a class="footer-link" href="https://www.github.com/">Website</a> -->
         <p class="copyright">© 2022 Aiden Walmer + Alexander Fox @ CS310 - Elizabethtown College.</p>
     </footer>
 

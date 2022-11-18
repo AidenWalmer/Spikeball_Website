@@ -16,15 +16,15 @@ function init() {
     btnElement.addEventListener('mousemove', () => {        // when hovering over the button, perform hover color change
        btnElement.classList.add('hover');
     });
+}
 
-    /* Store values of username and password then prompt the login function  */
-    function authenticate() {
-        let password = document.getElementById('password').value;
-        let username = document.getElementById('username').value;
+/* Store values of username and password then prompt the login function  */
+function authenticate() {
+    let password = document.getElementById('password').value;
+    let username = document.getElementById('username').value;
 
-        loggedIn = login(username, password);
-        loginStatus();
-    }
+    loggedIn = login(username, password);
+    loginStatus();
 }
  
 /* If login successful, transfer user to new page
@@ -46,7 +46,7 @@ function login(username, password) {
 
 function loginStatus() {
     if (loggedIn) {
-        alert('You logged in!');
+        // alert('You logged in!');
         console.log("Admin Session: " + loggedIn);
         // window.location.href = "http://localhost/cs310/Spikeball_Website/membersPage/members.html";
         window.location.href = "http://localhost/cs310/Spikeball_Website/membersAdminPage/membersAdmin.html";
