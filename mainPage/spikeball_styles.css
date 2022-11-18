@@ -117,6 +117,20 @@ body {
     margin: 0%;       /* Eliminates the small white border that surrounds the page */
 }
 
+#calendar-left {
+    width:50px;
+    position: relative;
+    right: 75px;
+    bottom: 50px;
+}
+
+#calendar-right {
+    width:50px;
+    position: relative;
+    left: 75px;
+    bottom: 50px;
+}
+
 @media only screen and (max-width: 620px) {
     /* For mobile phones: */
     header {
