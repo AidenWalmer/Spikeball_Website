@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etown Spikeball Club Login</title>
     <link rel="stylesheet" href="loginStyle.css">
-    <script src="loginPass.js"></script>
+    <script src="loginPass.php"></script>
 
 </head>
 
@@ -22,6 +22,8 @@
             <div id="errorDiv" class="hidden">
                 <label>Incorrect Username or Password!<hr id="errorHr"></label>
             </div>
+            <div id="error"><?php if(isset($error)){echo $error;} ?><hr></div>
+            <form action="login.php" method="POST">
         <label id="usernameLabel">Username:</label><br>
         <input id="username" placeholder="Type your username" required>
         <br>
