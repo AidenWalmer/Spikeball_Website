@@ -1,5 +1,5 @@
 <?PHP
-require_once "config.php";
+require "config.php";
 
 function getDataFromSQL($sql,$params=null){
     global $servername,$database,$username,$password;
@@ -18,7 +18,7 @@ function getDataFromSQL($sql,$params=null){
     // set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $valuesArray = $stmt->fetchAll();
-    return $valuesArray;
-    // return $result;
+    // return $valuesArray;
+    return $result;
 }
 ?>

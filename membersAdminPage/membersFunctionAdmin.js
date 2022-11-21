@@ -14,8 +14,9 @@ function init() {
     let editBtn = document.getElementById("editBtn");
     editBtn.addEventListener("click", editMember);
 
-    let cancelBtn = document.querySelector(".cancelBtn");
-    cancelBtn.addEventListener("click", cancelForm)
+    // Handled in HTML onclick="cancelForm()"
+    // let cancelBtn = document.querySelector(".cancelBtn");
+    // cancelBtn.addEventListener("click", cancelForm);
 }
 
 function addMember() {

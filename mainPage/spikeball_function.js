@@ -77,7 +77,7 @@ function linkRoundnetRules() {
 }
 
 function linkLoginPage() {
-    window.location.href = "http://localhost/cs310/Spikeball_Website/membersPage/members.html";
+    window.location.href = "http://localhost/cs310/Spikeball_Website/membersPage/members.php";
 }
 
  /**

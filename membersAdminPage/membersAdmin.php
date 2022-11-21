@@ -1,3 +1,9 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+require "membersDatabaseAdmin.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,10 +28,18 @@
         <h1 id="title">Club Members List</h1>
     </header>
 
+    <!-- Search Bar -->
     <div id="searchBar">
         <label><b>Search for a Member:</b></label>
         <input id="memberSearch" type="text" placeholder="Type a member name">
         <br>
+    </div>
+
+    <!-- Admin Buttons -->
+    <div id="adminBtns">
+        <button id="addBtn" name="addBtn">Add Member</button>
+        <button id="deleteBtn" name="deleteBtn">Delete Member</button>
+        <button id="editBtn" name="editBtn">Edit Member</button>
     </div>
 
     <!-- Add Member Form -->
@@ -35,27 +49,27 @@
             <BR>
             <div>
                 <label for="fNameInput">First Name: </label>
-                <input id="fNameInput" type="text" pattern="[A-Z][a-z]+" placeholder="John" required>
+                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a firstname in 'John' format." required>
             </div>
             <div>
                 <label for="lNameInput">Last Name: </label>
-                <input id="lNameInput" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" required> 
+                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" title="Please provide a lastname in 'Smith' format." required> 
             </div>
             <div>
                 <label for="emailInput">Student Email: </label>
-                <input id="emailInput" type="email" placeholder="example@etown.edu" required>
+                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" required>
             </div>
             <div>
                 <label for="joinDate">Date Joined: </label>
-                <input id="joinDate" placeholder="3/26/2022" required>
+                <input id="joinDate" name="date" placeholder="2022/03/26" title="Please provide a date in YEAR/MON/DAY format." required>
             </div>
             <div>
             <label for="gradYear">Graduation Year: </label>
-            <input id="gradYear" type="number" placeholder="2024" required>
+            <input id="gradYear" name="grad" type="number" placeholder="2024">
             </div>
             <div>
-            <button class="cancelBtn" type="submit">CANCEL</button>
-            <button class="submitBtn" type="submit">SUBMIT</button>
+            <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
+            <input type="submit" class="submitBtn" name="addMemberBtn" value="SUBMIT">
             </div>
         </form>
     </div>
@@ -67,24 +81,49 @@
             <BR>
             <div>
                 <label for="fNameInput">First Name: </label>
-                <input id="fNameInput" type="text" pattern="[A-Z][a-z]+" placeholder="John" required>
+                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a lastname in 'Smith' format." required>
             </div>
             <div>
                 <label for="lNameInput">Last Name: </label>
-                <input id="lNameInput" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" required> 
+                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith"  title="Please provide a lastname in 'Smith' format." required> 
             </div>
             <div>
-            <button class="cancelBtn" type="submit">CANCEL</button>
-            <button class="submitBtn" type="submit">SUBMIT</button>
+            <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
+            <input type="submit" class="submitBtn" name="deleteMemberBtn" value="SUBMIT">
             </div>
         </form>
     </div>
 
-    <!-- Admin Buttons -->
-    <div id="adminBtns">
-        <button id="addBtn">Add Member</button>
-        <button id="deleteBtn">Delete Member</button>
-        <button id="editBtn">Edit Member</button>
+    <!-- Edit Member Form -->
+    <div id="editDiv" class="hidden">
+        <form id="editForm" action="" method="post">
+            <h2>Edit a Member</h2>
+            <BR>
+            <div>
+                <label for="fNameInput">First Name: </label>
+                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a firstname in 'John' format." required>
+            </div>
+            <div>
+                <label for="lNameInput">Last Name: </label>
+                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" title="Please provide a lastname in 'Smith' format." required> 
+            </div>
+            <div>
+                <label for="emailInput">Student Email: </label>
+                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" required>
+            </div>
+            <div>
+                <label for="joinDate">Date Joined: </label>
+                <input id="joinDate" name="date" placeholder="2022/03/26" title="Please provide a date in YEAR/MON/DAY format." required>
+            </div>
+            <div>
+            <label for="gradYear">Graduation Year: </label>
+            <input id="gradYear" name="grad" type="number" placeholder="2024">
+            </div>
+            <div>
+            <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
+            <input type="submit" class="submitBtn" name="editMemberBtn" value="SUBMIT">
+            </div>
+        </form>
     </div>
 
     <table class="table table-bordered">
@@ -97,8 +136,35 @@
                 <th scope="col">STUDENT EMAIL</th>
             </tr>
         </thead>
+
         <!-- Table Elements -->
+        <?php
+        $userID = 1;
+        $sql = "SELECT * FROM members WHERE id>=:u";
+        $params = [":u"=>$userID];
+        $members = getDataFromSQL($sql, $params);
+        echo "members: ".$members;
+        // Loop over all members and send member info out as a table
+        foreach($members as $member) {
+        ?>
+
         <tbody>
+            <tr>
+                <td class="number"> <?php echo"{$member["id"]}";?> </td>
+                <td class="name"> <?php echo"{$member["nameFirst"]}"." "."{$member["nameLast"]}";?> </td>
+                <td class="date"> <?php echo"{$member["startDate"]}";?> </td>
+                <td class="grad"> <?php echo"{$member["gradYear"]}";?> </td>
+                <td class="email"> <?php echo"{$member["email"]}";?> </td>
+            </tr>
+        </tbody>
+
+        <?php
+        }
+        ?>
+    </table>
+
+
+        <!-- <tbody>
             <tr>
                 <th scope="row" class="number">1</th>
                 <td>Aiden Walmer</td>
@@ -285,8 +351,8 @@
                 <td class="date">9/1/2022</td>
                 <td>carneale@etown.edu</td>
             </tr>
-        </tbody>
-    </table>
+        </tbody> 
+    </table> -->
 
     <!-- footer -->
     <footer>

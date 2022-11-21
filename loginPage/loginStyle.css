@@ -16,8 +16,9 @@ body {
 /* Main Div Attributes */ 
 #main {
     background-color: white;     
+    filter: drop-shadow(0 0 0.75rem black);
     width: 250px;
-    height: 375px;
+    height: 370px;
 
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
@@ -32,12 +33,17 @@ body {
 h1 {
     text-align: center;             /* center h1 text */
     padding-top: 40px;              /* add extra space between top of the oage and LOGIN */
-    margin-bottom: 30px;            /* add extra space between LOGIN and username box */
+    margin-bottom: 15px;            /* add extra space between header and username box */
+}
+
+/* Form Attributes */
+form {
+    margin-top: 25px;
 }
 
 /* Input Boxes Attributes */
 input {
-    width: 225px;                   /* width of the input boxes */
+    width: 250px;                   /* width of the input boxes */
     padding: 10px;                  /* white space between input text and border */ 
 }
 
@@ -66,7 +72,7 @@ a:hover {
 }
 
 /* Button Attributes */
-button {
+#loginBtn {
     color: white;
     font-size: 12px;
     font-weight: bold; 
@@ -86,35 +92,31 @@ button {
 } 
 
 /* Button Modifyers */
-button:hover {
+#loginBtn:hover {
     /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);  LIGHTER HUE CYAN TO MAGENTA GRADIENT */
     background-image: linear-gradient(to right, #7DF9FF , #1034A6);  
     border-color: #36454F; 
 } 
 
 /* More Button Modifyers */
-button:focus {
+#loginBtn:focus {
     outline-offset: 2px;
 }
 
 /* Error Div Attributes */
 #errorDiv {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 14px;
     color: red;
     font-weight: bold;
     text-align: center;
-    margin-top: -20px;
-    margin-bottom: 15px;
 }
 
 /* Error Div Horizontal Line Attributes */
 #errorHr {
     margin-top: 0px;
-    border-color: red;
-}
-
-/* Hidden Class */
-.hidden {
-    display: none;
+    color: red;
+    border: solid 1px;
 }
 
 body {
@@ -126,7 +128,7 @@ body {
     #main {
         width: 60%;  
       }
-    button {
+    #loginBtn {
         width: 100%;
       }
     input {

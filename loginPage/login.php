@@ -1,3 +1,9 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+require "loginPass.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,24 +25,23 @@
     </div>
     <div id="main">
         <h1>Admin Login</h1>
-            <div id="errorDiv" class="hidden">
-                <label>Incorrect Username or Password!<hr id="errorHr"></label>
+        <div id="errorDiv"><?php if(isset($error)){echo $error;}?></div>
+        <form action="login.php" method="POST">
+            <label id="usernameLabel">Username:</label><br>
+            <input id="username" name="user" placeholder="Type your username" required>
+            <br>
+            <br>
+            <label id="passwordLabel">Password:</label><br>
+            <input id="password" name="pass" type="password" placeholder="Type your password" required>
+            <br>
+            <div id="memberDiv">
+                <a id="member"
+                    href="http://localhost/cs310/Spikeball_Website/membersPage/members.php">
+                    Continue as a Club Member</a>
             </div>
-            <div id="error"><?php if(isset($error)){echo $error;} ?><hr></div>
-            <form action="login.php" method="POST">
-        <label id="usernameLabel">Username:</label><br>
-        <input id="username" placeholder="Type your username" required>
-        <br>
-        <br>
-        <label id="passwordLabel">Password:</label><br>
-        <input id="password" type="password" placeholder="Type your password" required>
-        <br>
-        <div id="memberDiv">
-            <a id="member"
-                href="http://localhost/cs310/Spikeball_Website/membersPage/members.html">
-                Continue as a Club Member</a>
-        </div>
-        <button type="submit">LOGIN</button>
+            <input type="submit" id="loginBtn" name="loginBtn" value="LOGIN">
+            <!-- <button type="submit">LOGIN</button> -->
+        </form>
     </div>
 </body>
 

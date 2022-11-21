@@ -1,77 +1,64 @@
-/*
- * Author: Aiden Walmer
- * Date: 9/29/22
- * Description: Secure Login, using username and password
- */
+<?PHP
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+require "../includes/database_functions.php";
 
-window.addEventListener('load', init);    // when window is loaded, it will call init
-var loggedIn = false;
+// // Adding a new user to the database
+// if (isset($_POST['loginBtn'])) {
+//     $user = $_POST["user"];
+//     $pass = $_POST["pass"];
 
-function init() {
-    console.log("Admin session: " + loggedIn);
-    let btnElement = document.querySelector('button');      // select the button by query
-    btnElement.addEventListener('click', authenticate);     // on button click, redirect to adminMembersPage
- 
-    /* Button Color Changes */
-    btnElement.addEventListener('mousemove', () => {        // when hovering over the button, perform hover color change
-       btnElement.classList.add('hover');
-    });
-}
+//     $hash = password_hash($pass, PASSWORD_BCRYPT);
+//     echo 'password: '.$pass;
+//     echo ' hashed password: '.password_hash($pass, PASSWORD_BCRYPT);
 
-/* Store values of username and password then prompt the login function  */
-function authenticate() {
-    let password = document.getElementById('password').value;
-    let username = document.getElementById('username').value;
+//     $sql = "INSERT INTO users (username, password) VALUES (:e, :p)";
+//     $params = [":e"=>$user, ":p"=>$hash];
+//     $result = getDataFromSQL($sql, $params);
 
-    loggedIn = login(username, password);
-    loginStatus();
-}
- 
-/* If login successful, transfer user to new page
- * If login unsuccessful, display the correct error message
- */
-function login(username, password) {
-    // var storedUsername = 'spikeballclub'; 
-    // var storedPassword = 'spookball4life'; 
-    var storedUsername = 'spikeballclub'; 
-    var storedPassword = 'smashorpass'; 
+//     $checked = password_verify($pass, $hash);
+//     if ($checked) {
+//         echo ' New user created!';
+//     } else {
+//         echo ' Error creating new user!';
+//     }
+// }
 
-    console.log(username);
-    console.log(password);
+// New Method) Login!
+if (isset($_POST['loginBtn'])) {
+    // Grab the user entered username and password
+    $user = $_POST["user"];
+    $pass = $_POST["pass"];
 
-    if (username == storedUsername) {
-        return password == storedPassword;
-    }
-}
+    // Add a new username and password to the database
+    $sql = "SELECT * FROM users WHERE username = :e";
+    $params = [":e"=>$user];
+    $result = getDataFromSQL($sql, $params);
 
-function loginStatus() {
-    if (loggedIn) {
-        // alert('You logged in!');
-        console.log("Admin Session: " + loggedIn);
-        // window.location.href = "http://localhost/cs310/Spikeball_Website/membersPage/members.html";
-        window.location.href = "http://localhost/cs310/Spikeball_Website/membersAdminPage/membersAdmin.html";
-    }
-    else {
-        console.log('Incorrect username and password!');
-        // Error Message reveal 
-        let errorDiv = document.getElementById("errorDiv");
-        errorDiv.classList.remove("hidden");
-
-        // Red styliziation around username/password field 
-        var style = document.createElement('style');
-        style.innerHTML = ` 
-        #username::placeholder, #password::placeholder {
-            color: red;
+    if (is_array($result)) {     
+        $verify = password_verify($pass, $result);
+        if ($verify) {
+            echo "Logged In!";
+            $_SESSION["LoginStatus"]="YES";
+            $_SESSION["userid"]=$result["userid"];
+            header("location: membersAdmin.php");
+            exit;
+        } else {
+            echo "Incorrect Username or Password!";
+            echo " result: ".$result;
+            echo " password: ".$pass;
+            $_SESSION["LoginStatus"]="NO";
+            $_SESSION["userid"]="";
+            // header("location: login.php");
+            $error = "Incorrect Username or Password!";
+            echo " error: ".$error;
+            exit;
         }
-        
-        #username, #password {
-            border-color: red;
-        }
-        `;
-        document.head.appendChild(style);
+    } else {
+        echo "User not in database! (Incorrect Username or Password!)";
+        echo " result: ".$result;
+        echo " password: ".$pass;
     }
 }
- 
- 
- 
- 
+
+?>
