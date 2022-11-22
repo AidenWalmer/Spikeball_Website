@@ -15,8 +15,8 @@ if (isset($_POST['addMemberBtn'])) {
     $params = [":f"=>$fname, ":l"=>$lname, ":d"=>$date, ":g"=>$grad, ":e"=>$email];
     $result = getDataFromSQL($sql, $params);
 
-    if ($result) {
-        echo "<script>alert('SUCCESSFULLY: Added member to the members list!');</script>";
+    if (is_array($result) && count($result)>0) {
+        echo "<script>alert('SUCCESSFULL: Added new member to the members list!');</script>";
     } else {
         echo "<script>alert('ERROR: With creating a new member!');</script>";
     }
@@ -31,8 +31,8 @@ if (isset($_POST['deleteMemberBtn'])) {
     $params = [":f"=>$fname, ":l"=>$lname];
     $result = getDataFromSQL($sql, $params);
 
-    if ($result) {
-        echo "<script>alert('SUCCESSFULLY: Deleted member from the members list!');</script>";
+    if (is_array($result) && count($result)>0) {
+        echo "<script>alert('SUCCESSFULL: Deleted member from the members list!');</script>";
     } else {
         echo "<script>alert('ERROR: Invalid firstname or lastname!');</script>";
     }
@@ -50,8 +50,8 @@ if (isset($_POST['editMemberBtn'])) {
     $params = [":f"=>$fname, ":l"=>$lname, ":d"=>$date, ":g"=>$grad, ":e"=>$email];
     $result = getDataFromSQL($sql, $params);
 
-    if ($result) {
-        echo "<script>alert('SUCCESSFULLY: Edited member from the members list!');</script>";
+    if (is_array($result) && count($result)>0) {
+        echo "<script>alert('SUCCESSFULL: Edited member on the members list!');</script>";
     } else {
         echo "<script>alert('ERROR: With editing member!');</script>";
     }
