@@ -16,7 +16,7 @@ if (isset($_POST['addMemberBtn'])) {
     $result = getDataFromSQL($sql, $params);
 
     if (is_array($result) && count($result)>0) {
-        echo "<script>alert('SUCCESSFULL: Added new member to the members list!');</script>";
+        echo "<script>alert('SUCCESS: Added new member to the members list!');</script>";
     } else {
         echo "<script>alert('ERROR: With creating a new member!');</script>";
     }
@@ -32,7 +32,7 @@ if (isset($_POST['deleteMemberBtn'])) {
     $result = getDataFromSQL($sql, $params);
 
     if (is_array($result) && count($result)>0) {
-        echo "<script>alert('SUCCESSFULL: Deleted member from the members list!');</script>";
+        echo "<script>alert('SUCCESS: Deleted member from the members list!');</script>";
     } else {
         echo "<script>alert('ERROR: Invalid firstname or lastname!');</script>";
     }
@@ -51,7 +51,7 @@ if (isset($_POST['editMemberBtn'])) {
     $result = getDataFromSQL($sql, $params);
 
     if (is_array($result) && count($result)>0) {
-        echo "<script>alert('SUCCESSFULL: Edited member on the members list!');</script>";
+        echo "<script>alert('SUCCESS: Edited member on the members list!');</script>";
     } else {
         echo "<script>alert('ERROR: With editing member!');</script>";
     }
