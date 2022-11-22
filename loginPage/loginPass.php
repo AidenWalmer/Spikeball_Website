@@ -1,6 +1,7 @@
 <?PHP
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
+session_start();
 require "../includes/database_functions.php";
 
 // // Adding a new user to the database
@@ -10,7 +11,7 @@ require "../includes/database_functions.php";
 
 //     $hash = password_hash($pass, PASSWORD_BCRYPT);
 //     echo 'password: '.$pass;
-//     echo ' hashed password: '.password_hash($pass, PASSWORD_BCRYPT);
+//     echo ' hashed password: '.$hash;
 
 //     $sql = "INSERT INTO users (username, password) VALUES (:e, :p)";
 //     $params = [":e"=>$user, ":p"=>$hash];
@@ -24,7 +25,7 @@ require "../includes/database_functions.php";
 //     }
 // }
 
-// New Method) Login!
+// Secure Login!
 if (isset($_POST['loginBtn'])) {
     // Grab the user entered username and password
     $user = $_POST["user"];
@@ -35,29 +36,24 @@ if (isset($_POST['loginBtn'])) {
     $params = [":e"=>$user];
     $result = getDataFromSQL($sql, $params);
 
-    if (is_array($result)) {     
-        $verify = password_verify($pass, $result);
+    if (is_array($result) && count($result)>0) {     
+        $verify = password_verify($pass, $result[0]['password']);
         if ($verify) {
             echo "Logged In!";
             $_SESSION["LoginStatus"]="YES";
-            $_SESSION["userid"]=$result["userid"];
-            header("location: membersAdmin.php");
+            $_SESSION["userid"]=$result[0]["userid"];
+            header("location: ../membersAdminPage/membersAdmin.php");
             exit;
         } else {
-            echo "Incorrect Username or Password!";
-            echo " result: ".$result;
-            echo " password: ".$pass;
             $_SESSION["LoginStatus"]="NO";
             $_SESSION["userid"]="";
-            // header("location: login.php");
-            $error = "Incorrect Username or Password!";
-            echo " error: ".$error;
+            header("location: login.php");
+            $_SESSION["error"] = "Incorrect Username or Password!"."<hr id='errorHR'>";
             exit;
         }
     } else {
-        echo "User not in database! (Incorrect Username or Password!)";
-        echo " result: ".$result;
-        echo " password: ".$pass;
+        header("location: login.php");
+        $_SESSION["error"] = "Incorrect Username or Password!"."<hr id='errorHR'>";
     }
 }
 

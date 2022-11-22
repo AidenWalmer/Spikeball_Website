@@ -11,14 +11,14 @@ function getDataFromSQL($sql,$params=null){
     } catch(PDOException $e) {
       echo "Connection failed: " . $e->getMessage();
     }
-
+    
     $stmt = $conn->prepare($sql);
     $stmt->execute($params);
     
     // set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $valuesArray = $stmt->fetchAll();
-    // return $valuesArray;
-    return $result;
+    return $valuesArray;
+    // return $result;
 }
 ?>

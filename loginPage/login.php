@@ -1,6 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
+session_start();
 require "loginPass.php";
 ?>
 
@@ -25,7 +26,7 @@ require "loginPass.php";
     </div>
     <div id="main">
         <h1>Admin Login</h1>
-        <div id="errorDiv"><?php if(isset($error)){echo $error;}?></div>
+        <div id="errorDiv"><?php if(isset($_SESSION["error"])){echo $_SESSION["error"];} ?></div>
         <form action="login.php" method="POST">
             <label id="usernameLabel">Username:</label><br>
             <input id="username" name="user" placeholder="Type your username" required>

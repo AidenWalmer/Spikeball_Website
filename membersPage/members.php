@@ -1,3 +1,9 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+require "../includes/database_functions.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +15,9 @@
     <script src="membersFunction.js"></script>
 
 </head>
+
 <body>
-    <div class="home">
+    <div id="home">
         <a href="http://localhost/cs310/Spikeball_Website/mainPage/index.php">
             <img src="http://localhost/cs310/Spikeball_Website/images/home-big.png" alt="home icon" title="Home Button" height="75px">
         </a>
@@ -19,150 +26,55 @@
         <h1 id="title">Club Members List</h1>
     </header>
 
-    <div id="searchBarDiv">
+    <!-- Search Bar -->
+    <div id="searchBar">
         <button id="loginBtn">Admin Login</button>
-        <label><b>Search for a Member:</b></label>
-        <input id="memberSearch" type="text" placeholder="Type a member name">
-        <br>
-    </div>
+        <form id="searchForm" action='search.php' method=post>
+            <input id="memberSearch" name="term" type="text" placeholder="Type a member name">
+            <input type= "submit" value="Search"> 
+            <!-- <div id="searchIcon">
+                <img src="http://localhost/cs310/Spikeball_Website/images/magnifying-glass.png" alt="Search Icon" title="Search Button" height="13px" width="13px">
+            </div> -->
+            <br>
+        </div>
+    </form>
 
-    <table class="table table-bordered">
+<!-- Table Attributes -->
+<table class="table table-bordered">
         <!-- Table Headers -->
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">NAME</th>
-                <th scope="col">DATE</th>
+                <th scope="col">START DATE</th>
+                <th scope="col">GRAD</th>
                 <th scope="col">STUDENT EMAIL</th>
             </tr>
         </thead>
+
         <!-- Table Elements -->
+        <?php
+        $userID = 1;
+        $sql = "SELECT * FROM members WHERE id>=:u ORDER BY id";
+        $params = [":u"=>$userID];
+        $members = getDataFromSQL($sql, $params);
+        // Loop over all members and send member info out as a table
+        foreach($members as $member) {
+        ?>
+
         <tbody>
             <tr>
-                <th scope="row" class="number">1</th>
-                <td>Aiden Walmer</td><td class="date">2/7/2022</td><td>walmera1@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">2</th>
-                <td>Dylan Holland</td><td class="date">2/7/2022</td><td>hollandd1@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">3</th>
-                <td>Dylan Zambo</td><td class="date">2/7/2022</td><td>zambod@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">4</th>
-                <td>Alec Delgado</td><td class="date">2/7/2022</td><td>delgadoa@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">5</th>
-                <td>Adam Johnson</td><td class="date">2/7/2022</td><td>johnsona3@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">6</th>
-                <td>Kyle Ament</td><td class="date">2/7/2022</td><td>amentk@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">7</th>
-                <td>Scotty Reagan</td><td class="date">2/7/2022</td><td>reagans@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">8</th>
-                <td>Megan Nauroth</td><td class="date">2/7/2022</td><td>naurothm@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">9</th>
-                <td>Eric Hierl</td><td class="date">2/7/2022</td><td>hierle@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">10</th>
-                <td>Matteo Pinnero</td><td class="date">2/7/2022</td><td>pinnerom@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">11</th>
-                <td>Alex Lynch</td><td class="date">2/8/2022</td><td>lyncha2@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">12</th>
-                <td>Alex Fox</td><td class="date">2/8/2022</td><td>foxa1@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">13</th>
-                <td>Nathan Seeger</td><td class="date">2/8/2022</td><td>seegern@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">14</th>
-                <td>Ryan Geist</td><td class="date">2/8/2022</td><td>geistr@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">15</th>
-                <td>Keegan Donaher</td><td class="date">2/21/2022</td><td>donaherk@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">16</th>
-                <td>Ryam Ramler</td><td class="date">2/23/2022</td><td>ramlerr@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">17</th>
-                <td>Ernie Dennison</td><td class="date">2/24/2022</td><td>dennisone@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">18</th>
-                <td>Hannah Steenkamer</td><td class="date">3/16/2022</td><td>steenkamerh@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">19</th>
-                <td>Jordan Figueroa</td><td class="date">8/4/2022</td><td>figueroaj@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">20</th>
-                <td>Christopher Talluto</td><td class="date">8/4/2022</td><td>tallutoc@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">21</th>
-                <td>Blake Samsel</td><td class="date">8/4/2022</td><td>samselb@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">22</th>
-                <td>Matthew Thomas</td><td class="date">8/4/2022</td><td>thomasm5@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">23</th>
-                <td>Nathan Wiser</td><td class="date">8/4/2022</td><td>wisern@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">24</th>
-                <td>Mason Palmer</td><td class="date">8/26/2022</td><td>palmerm2@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">25</th>
-                <td>Christiana Mood</td><td class="date">8/26/2022</td><td>moodc@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">26</th>
-                <td>Victor Witkofsky</td><td class="date">8/26/2022</td><td>witkofskyv@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">27</th>
-                <td>Marissa Tuman</td><td class="date">8/27/2022</td><td>tumanm@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">28</th>
-                <td>Christy Martin</td><td class="date">8/29/2022</td><td>martinc@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">29</th>
-                <td>Jackson Lager</td><td class="date">8/31/2022</td><td>lagerj@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">30</th>
-                <td>Jaden Thomas</td><td class="date">9/1/2022</td><td>thomasj3@etown.edu</td>
-            </tr>
-            <tr>
-                <th scope="row" class="number">31</th>
-                <td>Evan Carneal</td><td class="date">9/1/2022</td><td>carneale@etown.edu</td>
+                <td class="number"> <?php echo"{$member["id"]}";?> </td>
+                <td class="name"> <?php echo"{$member["nameFirst"]}"." "."{$member["nameLast"]}";?> </td>
+                <td class="date"> <?php echo"{$member["startDate"]}";?> </td>
+                <td class="grad"> <?php echo"{$member["gradYear"]}";?> </td>
+                <td class="email"> <?php echo"{$member["email"]}";?> </td>
             </tr>
         </tbody>
+
+        <?php
+        }
+        ?>
     </table>
 
   <!-- footer -->

@@ -18,13 +18,12 @@ body {
     background-color: white;     
     filter: drop-shadow(0 0 0.75rem black);
     width: 250px;
-    height: 370px;
 
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
     margin-top: 40px;               /* add extra space from top of page (center to screen) */
 
-    padding-bottom: 10px;           /* add extra white space between button and div border */
+    padding-bottom: 40px;           /* add extra white space between button and div border */
     padding-left: 50px;             /* white space between div contents and div border */
     padding-right: 50px;            /* white space between div contents and div border */
 }
@@ -42,9 +41,10 @@ form {
 }
 
 /* Input Boxes Attributes */
-input {
-    width: 250px;                   /* width of the input boxes */
-    padding: 10px;                  /* white space between input text and border */ 
+#username, #password {
+    font-family: Tahoma, Verdana, sans-serif;
+    width: 225px;                   /* width of the input boxes */
+    padding: 10px;                  /* white space between input text and border of text field */ 
 }
 
 /* Username and Password label Attributes */
@@ -126,12 +126,13 @@ body {
 @media only screen and (max-width: 400px) {
     /* For mobile phones: */
     #main {
-        width: 60%;  
-      }
+        padding-left: 8%;
+        padding-right: 8%;
+    }
     #loginBtn {
         width: 100%;
-      }
-    input {
+    }
+    #username, #password {
         width: 91%
     }
 }

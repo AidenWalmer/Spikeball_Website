@@ -32,6 +32,7 @@ header {
     text-shadow: none;  
 }
 
+/* Title Attributes */
 #title {
     background-color: #0F52BA;  
     color: white;
@@ -49,9 +50,27 @@ header {
     margin-bottom: 20px;            /* Extra space between search bar and table */
 }
 
+#searchForm {
+    margin-bottom: 0px;
+}
+
+/* Search Button Attributes */
+#searchIcon {
+    display: inline;
+    padding: 2px;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#searchIcon:hover {
+    background-color:#ddd
+}
+
 /* Table Attributes */
 table {
     margin: auto;
+    text-align: center;
     border: 2px solid #0f4d92;
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: lightyellow; */
@@ -59,9 +78,11 @@ table {
 }
 
 /* Column Header Attributea */
-thead {
+th {
     color: white;
     background-color: #0f4d92;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* Numbers Column Attributes*/
@@ -69,6 +90,7 @@ thead {
     color: #0f4d92;
     background-color: #bcd4e6;
     padding: 5px;                   /* Padding for all cell elements...why? */
+    font-weight: bold;
 }
 
 /* Date Column Attributes */
@@ -175,8 +197,8 @@ footer {
     z-index: 1;     /* Show in front of previous page content */
 }
 
-/* ALL Form Attributes */
-form {
+/* Popup Form Attributes */
+#addForm, #deleteForm, #editForm {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 40px;
@@ -232,7 +254,7 @@ form>div {
 }
 
 /* Disable the buttons while a form is on screen */
-.disabled{
+.disabled {
     pointer-events: none;
 }
 
