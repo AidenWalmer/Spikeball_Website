@@ -12,19 +12,24 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
         <?php include 'membersStyle.css'; ?> 
         </style>
 
+    <head>
+        <title>Etown Spikeball Search Members Page</title>
+        <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
+    </head>
+
     <body>
         <div id="home">
-            <a href="http://localhost/cs310/Spikeball_Website/mainPage/index.php">
-                <img src="http://localhost/cs310/Spikeball_Website/images/home-big.png" alt="home icon" title="Home Button" height="75px">
+            <a href="http://localhost/cs310/Spikeball_Website/membersPage/members.php">
+                <img src="http://localhost/cs310/Spikeball_Website/images/back-arrow.png" alt="back icon" title="Back Button" height="75px" color="white">
             </a>
         </div>
         <header>
-            <h1 id="title">Club Members List</h1>
+            <h1 id="title">Search Members List</h1>
+            <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
         </header>
 
         <!-- Search Bar -->
         <div id="searchBar">
-            <button id="loginBtn">Admin Login</button>
             <form id="searchForm" action='search.php' method=post>
                 <input id="memberSearch" name="term" type="text" placeholder="Type a member name">
                 <input type= "submit" value="Search"> 
