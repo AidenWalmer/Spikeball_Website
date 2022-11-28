@@ -2,7 +2,7 @@
 <?php
 $data = $_POST["term"];
 
-if ($data == "" || $data == " ") {
+if (trim($data) == "") {    // If data is empty or includes any number of whitespaces
     header("location: membersAdmin.php");
 } else {
     $answer = explode(" ",$data);
@@ -11,7 +11,7 @@ if ($data == "" || $data == " ") {
         <style>
         <?php include 'membersStyleAdmin.css'; ?> 
         </style>
-
+        
         <!-- Table Attributes -->
         <table class="table table-bordered">
         <!-- Table Headers -->

@@ -2,7 +2,7 @@
 <?php
 $data = $_POST["term"];
 
-if ($data == "" || $data == " ") {
+if (trim($data) == "") {    // If data is empty or includes any number of whitespaces
     header("location: members.php");
 } else {
     $answer = explode(" ",$data);
@@ -11,6 +11,29 @@ if ($data == "" || $data == " ") {
         <style>
         <?php include 'membersStyle.css'; ?> 
         </style>
+
+    <body>
+        <div id="home">
+            <a href="http://localhost/cs310/Spikeball_Website/mainPage/index.php">
+                <img src="http://localhost/cs310/Spikeball_Website/images/home-big.png" alt="home icon" title="Home Button" height="75px">
+            </a>
+        </div>
+        <header>
+            <h1 id="title">Club Members List</h1>
+        </header>
+
+        <!-- Search Bar -->
+        <div id="searchBar">
+            <button id="loginBtn">Admin Login</button>
+            <form id="searchForm" action='search.php' method=post>
+                <input id="memberSearch" name="term" type="text" placeholder="Type a member name">
+                <input type= "submit" value="Search"> 
+                <!-- <div id="searchIcon">
+                    <img src="http://localhost/cs310/Spikeball_Website/images/magnifying-glass.png" alt="Search Icon" title="Search Button" height="13px" width="13px">
+                </div> -->
+                <br>
+            </div>
+        </form>
 
         <!-- Table Attributes -->
         <table class="table table-bordered">
