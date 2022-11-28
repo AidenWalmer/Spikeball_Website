@@ -41,9 +41,9 @@ require "membersDatabaseAdmin.php";
 
     <!-- Admin Buttons -->
     <div id="adminBtns">
-        <button id="addBtn" name="addBtn">Add Member</button>
-        <button id="deleteBtn" name="deleteBtn">Delete Member</button>
-        <button id="editBtn" name="editBtn">Edit Member</button>
+        <button id="addBtn" name="addMemberBtn">Add Member</button>
+        <button id="deleteBtn" name="deleteMemberBtn">Delete Member</button>
+        <button id="editBtn" name="editMemberBtn">Edit Member</button>
     </div>
 
     <!-- Add Member Form -->
