@@ -30,7 +30,7 @@ require "loginPass.php";
         <div id="errorDiv"><?php if(isset($_SESSION["error"])){echo $_SESSION["error"];} ?></div>
         <form action="login.php" method="POST">
             <label id="usernameLabel">Username:</label><br>
-            <input id="username" name="user" placeholder="Type your username" required>
+            <input id="username" name="user" placeholder="Type your username" autocomplete="off" required>
             <br>
             <br>
             <label id="passwordLabel">Password:</label><br>

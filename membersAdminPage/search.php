@@ -18,9 +18,9 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
     </head>
     
     <body>
-        <div id="home">
+        <div id="back">
             <a href="http://localhost/cs310/Spikeball_Website/membersAdminPage/membersAdmin.php">
-                <img src="http://localhost/cs310/Spikeball_Website/images/back-arrow.png" alt="home icon" title="Back Button" height="75px">
+                <img src="http://localhost/cs310/Spikeball_Website/images/back-button.png" alt="back icon" title="Back Button" height="90px">
             </a>
         </div>
         

@@ -32,6 +32,15 @@ header {
     text-shadow: none;  
 }
 
+/* Back Button Attributes */
+#back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: inline;
+    color: #c8c8c8; 
+}
+
 /* Title Attributes */
 #title {
     background-color: #0F52BA;  

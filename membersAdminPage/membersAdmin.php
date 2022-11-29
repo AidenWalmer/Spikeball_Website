@@ -15,7 +15,6 @@ require "membersDatabaseAdmin.php";
     <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
     <link rel="stylesheet" href="membersStyleAdmin.css">
     <script src="membersFunctionAdmin.js"></script>
-
 </head>
 
 <body>
@@ -31,7 +30,7 @@ require "membersDatabaseAdmin.php";
     <!-- Search Bar -->
     <div id="searchBar">
         <form id="searchForm" action='search.php' method=post>
-            <input id="memberSearch" name="term" type="text" placeholder="Type a member name">
+            <input id="memberSearch" name="term" type="text" placeholder="Type a member name" autocomplete="on">
             <input type= "submit" value="Search"> 
             <!-- <div id="searchIcon">
                 <img src="http://localhost/cs310/Spikeball_Website/images/magnifying-glass.png" alt="Search Icon" title="Search Button" height="13px" width="13px">
@@ -54,15 +53,15 @@ require "membersDatabaseAdmin.php";
             <BR>
             <div>
                 <label for="fNameInput">First Name: </label>
-                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a firstname in 'John' format." required>
+                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a firstname in 'John' format." autocomplete="off" required>
             </div>
             <div>
                 <label for="lNameInput">Last Name: </label>
-                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" title="Please provide a lastname in 'Smith' format." required> 
+                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" title="Please provide a lastname in 'Smith' format." autocomplete="off" required> 
             </div>
             <div>
                 <label for="emailInput">Student Email: </label>
-                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" required>
+                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" autocomplete="off" required>
             </div>
             <div>
                 <label for="joinDate">Date Joined: </label>
