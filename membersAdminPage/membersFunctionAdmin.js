@@ -126,6 +126,11 @@ function cancelForm() {
     `;
     document.head.appendChild(style);
 
+    // Clear ALL input forms contents
+    document.getElementById("addForm").reset();
+    document.getElementById("editForm").reset();
+    document.getElementById("deleteForm").reset();
+
     // Hide all Forms
     let addDiv = document.getElementById("addDiv");
     addDiv.classList.add("hidden");

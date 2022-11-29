@@ -85,11 +85,11 @@ require "membersDatabaseAdmin.php";
             <BR>
             <div>
                 <label for="fNameInput">First Name: </label>
-                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a lastname in 'Smith' format." required>
+                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a lastname in 'Smith' format." autocomplete="off" required>
             </div>
             <div>
                 <label for="lNameInput">Last Name: </label>
-                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith"  title="Please provide a lastname in 'Smith' format." required> 
+                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith"  title="Please provide a lastname in 'Smith' format." autocomplete="off" required> 
             </div>
             <div>
             <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
@@ -105,15 +105,15 @@ require "membersDatabaseAdmin.php";
             <BR>
             <div>
                 <label for="fNameInput">First Name: </label>
-                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a firstname in 'John' format." required>
+                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a firstname in 'John' format." autocomplete="off" required>
             </div>
             <div>
                 <label for="lNameInput">Last Name: </label>
-                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" title="Please provide a lastname in 'Smith' format." required> 
+                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" title="Please provide a lastname in 'Smith' format." autocomplete="off" required> 
             </div>
             <div>
                 <label for="emailInput">Student Email: </label>
-                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" required>
+                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" autocomplete="off" required>
             </div>
             <div>
                 <label for="joinDate">Date Joined: </label>

@@ -40,13 +40,14 @@ if (isset($_POST['loginBtn'])) {
         $verify = password_verify($pass, $result[0]['password']);
         if ($verify) {
             echo "Logged In!";
+            // $_SESSION["userid"]=$result[0]["userid"];
             $_SESSION["LoginStatus"]="YES";
-            $_SESSION["userid"]=$result[0]["userid"];
             header("location: ../membersAdminPage/membersAdmin.php");
+            $_SESSION["error"] = "";
             exit;
         } else {
+            // $_SESSION["userid"]="";
             $_SESSION["LoginStatus"]="NO";
-            $_SESSION["userid"]="";
             header("location: login.php");
             $_SESSION["error"] = "Incorrect Username or Password!"."<hr id='errorHR'>";
             exit;
