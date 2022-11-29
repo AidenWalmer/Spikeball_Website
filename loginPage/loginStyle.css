@@ -22,7 +22,7 @@ body {
 
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
-    margin-top: 40px;               /* add extra space from top of page (center to screen) */
+    margin-top: 50px;               /* add extra space from top of page (center to screen) */
 
     padding-bottom: 40px;           /* add extra white space between button and div border */
     padding-left: 50px;             /* white space between div contents and div border */
