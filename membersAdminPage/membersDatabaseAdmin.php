@@ -3,6 +3,12 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 require "../includes/database_functions.php";
 
+if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
+    // echo "You logged in!";
+} else {
+    header("location: ../mainPage/index.php");
+}
+
 // Adding a new member to the database
 if (isset($_POST['addMemberBtn'])) {
     $fname = $_POST["fname"];
