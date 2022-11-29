@@ -79,6 +79,8 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
         </html>
 
     <?php
+
     }
 }
 ?>
+

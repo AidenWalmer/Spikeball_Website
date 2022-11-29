@@ -80,9 +80,6 @@ require "../includes/database_functions.php";
 
   <!-- footer -->
   <footer>
-    <!-- <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-    <a class="footer-link" href="https://twitter.com/">Twitter</a>
-    <a class="footer-link" href="https://www.github.com/">Website</a> -->
     <p class="copyright">© 2022 Aiden Walmer + Alexander Fox @ CS310 - Elizabethtown College.</p>
   </footer>
 
