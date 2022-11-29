@@ -69,7 +69,8 @@ header div.tabs {
 main {
     padding-top: 30px;
     text-align: center;
-    background-image: linear-gradient(to top, #000080, lightsteelblue);  
+    /* background-image: linear-gradient(to top, #000080, lightsteelblue);   */
+    background-image: linear-gradient(to top, #000080, #8bcbfd);
 }
 
 /* Div Attributes */ 

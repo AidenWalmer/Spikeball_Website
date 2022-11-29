@@ -1,7 +1,8 @@
 /* Background Attributes */
 body { 
-    /* background-image: linear-gradient(to right, aqua , #BF40BF);  CYAN TO MAGENTA GRADIENT */
-    background-image: linear-gradient(to right, aqua , #000080);
+    /* background-image: linear-gradient(to right, aqua, #BF40BF);  CYAN TO MAGENTA GRADIENT */
+    /* background-image: linear-gradient(to right, aqua, #000080); */ 
+    background-image: linear-gradient(to right, #8bcbfd, #000080);
     /* font-family: 'Sabon', sans-serif; */
     font-family: Tahoma, Verdana, sans-serif;
 }
@@ -81,20 +82,20 @@ a:hover {
     border: 2px solid black; 
     border-radius: 18px;
 
-    outline: 2px solid black ;
+    outline: 2px solid black;
     transition: outline-offset 200ms ease;
     outline-offset: -2px; 
 
     width: 250px;
     padding: 10px;
     /* background-image: linear-gradient(to right, cyan, #BF40BF);  CYAN TO MAGENTA GRADIENT */ 
-    background-image: linear-gradient(to right, aqua , #000080);
+    background-image: linear-gradient(to right, #8bcbfd, #000080);
 } 
 
 /* Button Modifyers */
 #loginBtn:hover {
     /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);  LIGHTER HUE CYAN TO MAGENTA GRADIENT */
-    background-image: linear-gradient(to right, #7DF9FF , #1034A6);  
+    background-image: linear-gradient(to right, #bce2ff, #1034A6);  
     border-color: #36454F; 
 } 
 
