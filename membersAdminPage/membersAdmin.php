@@ -1,10 +1,12 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
+session_start();
 require "membersDatabaseAdmin.php";
 
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
     // echo "You logged in!";
+    // header("location: ../membersAdminPage/membersAdmin.php")
 } else {
     header("location: ../mainPage/index.php");
 }
