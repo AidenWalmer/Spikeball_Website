@@ -14,6 +14,9 @@ function init() {
     let editBtn = document.getElementById("editBtn");
     editBtn.addEventListener("click", editMember);
 
+    let logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.addEventListener("click", logout);
+
     // Handled in HTML onclick="cancelForm()"
     // let cancelBtn = document.querySelector(".cancelBtn");
     // cancelBtn.addEventListener("click", cancelForm);
@@ -138,4 +141,8 @@ function cancelForm() {
     deleteDiv.classList.add("hidden");
     let editDiv = document.getElementById("editDiv");
     editDiv.classList.add("hidden");
+}
+
+function logout() {
+    
 }

@@ -6,7 +6,6 @@ require "membersDatabaseAdmin.php";
 
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
     // echo "You logged in!";
-    // header("location: ../membersAdminPage/membersAdmin.php")
 } else {
     header("location: ../mainPage/index.php");
 }
@@ -37,6 +36,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
 
     <!-- Search Bar -->
     <div id="searchBar">
+        <button id="logoutBtn">Logout</button>
         <form id="searchForm" action='search.php' method=post>
             <input id="memberSearch" name="term" type="text" placeholder="Type a member name" autocomplete="on">
             <input type= "submit" value="Search"> 

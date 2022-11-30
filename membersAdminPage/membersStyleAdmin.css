@@ -77,6 +77,24 @@ header {
     background-color:#ddd
 }
 
+/* Admin Logout Button Attributes */
+#logoutBtn {
+    position: absolute;
+    left: 32px;
+    border:2px solid black;
+    color:#000000;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color:rgb(255, 67, 67);
+    transition: all 0.15s;
+}
+
+/* Logout Button Hover */
+#logoutBtn:hover {
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color:#FFFFFF;
+    border-color: white;
+}
+
 /* Table Attributes */
 table {
     margin: auto;

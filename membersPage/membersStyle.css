@@ -77,6 +77,12 @@ header {
     background-color:#ddd
 }
 
+/* Admin Login Button Attributes */
+#loginBtn {
+    position: absolute;
+    left: 18px;
+}
+
 /* Table Attributes */
 table {
     margin: auto;
@@ -112,12 +118,6 @@ th {
 /* Table Cells Borders */
 td {
     border: 1px solid #0f4d92; 
-}
-
-/* Admin Login Button Attributes */
-#loginBtn {
-    position: absolute;
-    left: 18px;
 }
 
 /* Footer Attributes */
