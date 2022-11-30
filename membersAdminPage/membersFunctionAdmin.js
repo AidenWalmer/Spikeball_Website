@@ -124,7 +124,7 @@ function cancelForm() {
     var style = document.createElement('style');
     style.innerHTML = ` 
     body {
-        background-image: linear-gradient(to top, #000080, lightsteelblue);  
+        background-image: linear-gradient(to top, #000080, #8bcbfd); 
     }
     `;
     document.head.appendChild(style);
@@ -144,5 +144,5 @@ function cancelForm() {
 }
 
 function logout() {
-    
+    window.location.href = "http://localhost/cs310/Spikeball_Website/membersAdminPage/logout.php";
 }
