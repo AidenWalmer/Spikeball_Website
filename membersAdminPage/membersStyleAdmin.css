@@ -211,7 +211,7 @@ footer {
 
 #editDiv {
     width: 400px;
-    height: 315px; 
+    height: 350px; 
     background-color: rgb(234, 234, 234);
 
     /* Center the div to the page */
@@ -228,7 +228,6 @@ footer {
 /* Popup Form Attributes */
 #addForm, #deleteForm, #editForm {
     padding-top: 20px;
-    padding-bottom: 20px;
     padding-left: 40px;
     padding-right: 40px;
     display: flex;

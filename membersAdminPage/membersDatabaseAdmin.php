@@ -21,7 +21,7 @@ if (isset($_POST['addMemberBtn'])) {
     $params = [":f"=>$fname, ":l"=>$lname, ":d"=>$date, ":g"=>$grad, ":e"=>$email];
     $result = getDataFromSQL($sql, $params);
 
-    if (is_array($result) && count($result)>0) {
+    if (is_array($result)) {
         echo "<script>alert('SUCCESS: Added new member to the members list!');</script>";
     } else {
         echo "<script>alert('ERROR: With creating a new member!');</script>";
@@ -37,7 +37,7 @@ if (isset($_POST['deleteMemberBtn'])) {
     $params = [":f"=>$fname, ":l"=>$lname];
     $result = getDataFromSQL($sql, $params);
 
-    if (is_array($result) && count($result)>0) {
+    if (is_array($result)) {
         echo "<script>alert('SUCCESS: Deleted member from the members list!');</script>";
     } else {
         echo "<script>alert('ERROR: Invalid firstname or lastname!');</script>";
@@ -48,15 +48,16 @@ if (isset($_POST['deleteMemberBtn'])) {
 if (isset($_POST['editMemberBtn'])) {
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
+    $id = $_POST["id"];
     $date = $_POST["date"];
     $grad = $_POST["grad"];
     $email = $_POST["email"];
 
-    $sql = "UPDATE members SET nameFirst=:f, nameLast=:l, startDate=:d, gradYear=:g, email=:e WHERE nameFirst=:f AND nameLast=:l";
-    $params = [":f"=>$fname, ":l"=>$lname, ":d"=>$date, ":g"=>$grad, ":e"=>$email];
+    $sql = "UPDATE members SET nameFirst=:f, nameLast=:l, id=:i, startDate=:d, gradYear=:g, email=:e WHERE nameFirst=:f AND nameLast=:l";
+    $params = [":f"=>$fname, ":l"=>$lname, ":i"=>$id, ":d"=>$date, ":g"=>$grad, ":e"=>$email];
     $result = getDataFromSQL($sql, $params);
 
-    if (is_array($result) && count($result)>0) {
+    if (is_array($result)) {
         echo "<script>alert('SUCCESS: Edited member on the members list!');</script>";
     } else {
         echo "<script>alert('ERROR: With editing member!');</script>";

@@ -53,6 +53,7 @@ if (isset($_POST['loginBtn'])) {
             exit;
         }
     } else {
+        $_SESSION["LoginStatus"]="NO";
         header("location: login.php");
         $_SESSION["error"] = "Incorrect Username or Password!"."<hr id='errorHR'>";
     }

@@ -2,6 +2,9 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
+if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
+    header("location: ../membersAdminPage/membersAdmin.php");
+} 
 require "loginPass.php";
 ?>
 

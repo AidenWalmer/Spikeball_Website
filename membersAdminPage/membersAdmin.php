@@ -69,7 +69,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             </div>
             <div>
                 <label for="emailInput">Student Email: </label>
-                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" autocomplete="off" required>
+                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" title="Please provide an email in 'user@etown.edu' format." autocomplete="off" required>
             </div>
             <div>
                 <label for="joinDate">Date Joined: </label>
@@ -113,22 +113,26 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             <BR>
             <div>
                 <label for="fNameInput">First Name: </label>
-                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="John" title="Please provide a firstname in 'John' format." autocomplete="off" required>
+                <input id="fNameInput" name="fname" type="text" pattern="[A-Z][a-z]+" placeholder="Fname of member to edit" title="Please provide a firstname in 'John' format." autocomplete="off" required>
             </div>
             <div>
                 <label for="lNameInput">Last Name: </label>
-                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Smith" title="Please provide a lastname in 'Smith' format." autocomplete="off" required> 
+                <input id="lNameInput" name="lname" type="text" pattern="[A-Z][a-z]+" placeholder="Lname of member to edit" title="Please provide a lastname in 'Smith' format." autocomplete="off" required> 
             </div>
             <div>
-                <label for="emailInput">Student Email: </label>
-                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" autocomplete="off" required>
+                <label for="userid">Edit ID: </label>
+                <input id="userid" name="id" type="number" pattern="[A-Z][a-z]+" placeholder="25" title="Please provide an ID in '#' format." autocomplete="off" required> 
             </div>
             <div>
-                <label for="joinDate">Date Joined: </label>
+                <label for="emailInput">Edit Email: </label>
+                <input id="emailInput" name="email" type="email" placeholder="example@etown.edu" title="Please provide an email in 'user@etown.edu' format."autocomplete="off" required>
+            </div>
+            <div>
+                <label for="joinDate">Edit Join Date: </label>
                 <input id="joinDate" name="date" placeholder="2022/03/26" title="Please provide a date in YEAR/MON/DAY format." required>
             </div>
             <div>
-            <label for="gradYear">Graduation Year: </label>
+            <label for="gradYear">Edit Grad Year: </label>
             <input id="gradYear" name="grad" type="number" placeholder="2024">
             </div>
             <div>
