@@ -1,4 +1,7 @@
 body {
+    margin: 0%;   /* Eliminates the small white border that surrounds the page */
+    /* background-image: linear-gradient(to top, #000080, lightsteelblue);  */
+    background-image: linear-gradient(to top, #000080, #8bcbfd);
     font-family: 'Sabon', sans-serif;
     /* font-family: Helvetica, Arial, sans-serif; */
 }
@@ -13,10 +16,10 @@ header {
     padding: 1px;                   /* Extra blue space from top and bottom of Header */
     padding-top: 35px;
     padding-bottom: 35px;           /* Space between title and search bar */ 
-}
+} 
 
 /* Home Button Attributes */
-.home {
+#home {
     position: absolute;
     top: 25px;
     left: 25px;
@@ -25,11 +28,21 @@ header {
 }
 
 /* Hiding wierd home picture elements */
-.home a {
+#home a {
     color: #0F52BA;
     text-shadow: none;  
 }
 
+/* Back Button Attributes */
+#back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: inline;
+    color: #c8c8c8; 
+}
+
+/* Title Attributes */
 #title {
     background-color: #0F52BA;  
     color: white;
@@ -38,13 +51,30 @@ header {
     padding: 3px;                     
 }
 
-/* Search Bar Div Attributes */
-#searchBarDiv {
+/* Search Bar Attributes */
+#searchBar {
     text-align: center;
     background-color: white;
     border: 1px solid black;
     padding: 5px; 
     margin-bottom: 20px;            /* Extra space between search bar and table */
+}
+
+#searchForm {
+    margin-bottom: 0px;
+}
+
+/* Search Button Attributes */
+#searchIcon {
+    display: inline;
+    padding: 2px;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#searchIcon:hover {
+    background-color:#ddd
 }
 
 /* Admin Login Button Attributes */
@@ -56,6 +86,7 @@ header {
 /* Table Attributes */
 table {
     margin: auto;
+    text-align: center;
     border: 2px solid #0f4d92;
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: lightyellow; */
@@ -63,9 +94,11 @@ table {
 }
 
 /* Column Header Attributea */
-thead {
+th {
     color: white;
     background-color: #0f4d92;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* Numbers Column Attributes*/
@@ -73,6 +106,7 @@ thead {
     color: #0f4d92;
     background-color: #bcd4e6;
     padding: 5px;                   /* Padding for all cell elements...why? */
+    font-weight: bold;
 }
 
 /* Date Column Attributes */
@@ -93,12 +127,6 @@ footer {
     padding: 15px;
     background-color: #000080;
     color: white;
-}
-
-body {
-    margin: 0%;                     /* Eliminates the small white border that surrounds the page */
-    /* background-color: lightsteelblue  */
-    background-image: linear-gradient(to top, #000080, lightsteelblue);  
 }
 
 /* Resizing for mobile phones: */

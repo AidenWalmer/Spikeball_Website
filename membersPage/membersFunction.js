@@ -7,5 +7,5 @@ function init() {
 }
 
 function toAdminLogin() {
-    window.location.href = "http://localhost/cs310/Spikeball_Website/loginPage/login.html";
+    window.location.href = "http://localhost/cs310/Spikeball_Website/loginPage/login.php";
 }

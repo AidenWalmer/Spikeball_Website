@@ -1,4 +1,7 @@
 body {
+    margin: 0%;   /* Eliminates the small white border that surrounds the page */
+    /* background-image: linear-gradient(to top, #000080, lightsteelblue);  */
+    background-image: linear-gradient(to top, #000080, #8bcbfd);
     font-family: 'Sabon', sans-serif;
     /* font-family: Helvetica, Arial, sans-serif; */
 }
@@ -13,10 +16,10 @@ header {
     padding: 1px;                   /* Extra blue space from top and bottom of Header */
     padding-top: 35px;
     padding-bottom: 35px;           /* Space between title and search bar */ 
-}
+} 
 
 /* Home Button Attributes */
-.home {
+#home {
     position: absolute;
     top: 25px;
     left: 25px;
@@ -25,11 +28,21 @@ header {
 }
 
 /* Hiding wierd home picture elements */
-.home a {
+#home a {
     color: #0F52BA;
     text-shadow: none;  
 }
 
+/* Back Button Attributes */
+#back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: inline;
+    color: #c8c8c8; 
+}
+
+/* Title Attributes */
 #title {
     background-color: #0F52BA;  
     color: white;
@@ -47,9 +60,45 @@ header {
     margin-bottom: 20px;            /* Extra space between search bar and table */
 }
 
+#searchForm {
+    margin-bottom: 0px;
+}
+
+/* Search Button Attributes */
+#searchIcon {
+    display: inline;
+    padding: 2px;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#searchIcon:hover {
+    background-color:#ddd
+}
+
+/* Admin Logout Button Attributes */
+#logoutBtn {
+    position: absolute;
+    left: 32px;
+    border:2px solid black;
+    color:#000000;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color:rgb(255, 67, 67);
+    transition: all 0.15s;
+}
+
+/* Logout Button Hover */
+#logoutBtn:hover {
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color:#FFFFFF;
+    border-color: white;
+}
+
 /* Table Attributes */
 table {
     margin: auto;
+    text-align: center;
     border: 2px solid #0f4d92;
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: lightyellow; */
@@ -57,9 +106,11 @@ table {
 }
 
 /* Column Header Attributea */
-thead {
+th {
     color: white;
     background-color: #0f4d92;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* Numbers Column Attributes*/
@@ -67,6 +118,7 @@ thead {
     color: #0f4d92;
     background-color: #bcd4e6;
     padding: 5px;                   /* Padding for all cell elements...why? */
+    font-weight: bold;
 }
 
 /* Date Column Attributes */
@@ -89,41 +141,99 @@ footer {
     color: white;
 }
 
-body {
-    margin: 0%;                     /* Eliminates the small white border that surrounds the page */
-    /* background-color: lightsteelblue  */
-    background-image: linear-gradient(to top, #000080, lightsteelblue);  
-}
-
-/* Admin Buttons */
+/* Admin Buttons Group Properties */
 #adminBtns {
     text-align: center;
     margin-bottom: 20px;
 }
 
-#deleteBtn {
-    margin-left: 10px;
-    margin-right: 10px;
+/* Admin Buttons Attributes */
+#addBtn, #deleteBtn, #editBtn {
+    width: 110px;
+    padding: 4px;
+    font-size: 14px;
+    text-align: center;
+    margin: auto;
+    border:2px solid black;
+    border-radius:2em;
+    color:#000000;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color:#408dff;
+    transition: all 0.15s;
 }
 
-/* ALL Form Div Content Attributes */
-#addDiv, #deleteDiv, #editDiv {
+/* Admin Buttons Space Between */
+#deleteBtn {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Admin Buttons Hover */
+#addBtn:hover, #deleteBtn:hover, #editBtn:hover {
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color:#FFFFFF;
+    border-color: white;
+}
+
+/* Add Form Div Attributes */
+#addDiv {
     width: 400px;
-    height: 300px;
-    background-color: white;
+    height: 315px; 
+    background-color: rgb(234, 234, 234);
+
+    /* Center the div to the page */
     position: fixed;
-    left: 550px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
     border-radius: 10px;
     box-shadow: 0px 0px 0px 2px #000;
+    z-index: 1;     /* Show in front of previous page content */
+} 
+
+/* Delete Form Div Attributes */
+#deleteDiv {
+    width: 400px;
+    min-height: 200px; 
+    background-color: rgb(234, 234, 234);
+
+    /* Center the div to the page */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px #000;
+    z-index: 1;     /* Show in front of previous page content */
 }
 
-/* ALL Form Attributes */
-form {
-    padding: 10px;
+#editDiv {
+    width: 400px;
+    height: 350px; 
+    background-color: rgb(234, 234, 234);
+
+    /* Center the div to the page */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px #000;
+    z-index: 1;     /* Show in front of previous page content */
+}
+
+/* Popup Form Attributes */
+#addForm, #deleteForm, #editForm {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    font-family: Helvetica, Arial, sans-serif;
+    /* font-family: Helvetica, Arial, sans-serif; */
 }
 
 /* All Form Content Attributes */  
@@ -140,8 +250,40 @@ form>div {
     margin: 0;
 }
 
+/* Form Div Button Attributes */
+.cancelBtn, .submitBtn {
+    width: 100px;
+    padding: 3px;
+    text-align: center;
+    margin: auto;
+    border:2px solid black;
+    border-radius:2em;
+    color:#000000;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color:#408dff;
+    text-align:center;
+    transition: all 0.15s;
+}
+
+.cancelBtn:hover, .submitBtn:hover {
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color:#FFFFFF;
+    border-color: white;
+}
+
+/* Hide specific page content */
 .hidden {
     display: none;
+}
+
+/* Darken the page after a button click */
+.darken {
+    filter: brightness(50%);
+}
+
+/* Disable the buttons while a form is on screen */
+.disabled {
+    pointer-events: none;
 }
 
 /* Resizing for mobile phones: */
