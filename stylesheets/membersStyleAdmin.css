@@ -173,7 +173,7 @@ footer {
 }
 
 /* Admin Buttons Hover */
-#addBtn:hover, #deleteBtn:hover, #editBtn:hover {
+#addBtn:hover, #deleteBtn:hover, #editBtn:hover, #addEvent:hover {
     text-shadow: 0 0 2em rgba(255,255,255,1);
     color:#FFFFFF;
     border-color: white;
@@ -213,6 +213,7 @@ footer {
     z-index: 1;     /* Show in front of previous page content */
 }
 
+/* Edit Form Div Attributes */
 #editDiv {
     width: 400px;
     height: 350px; 

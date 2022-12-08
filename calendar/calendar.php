@@ -6,16 +6,13 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
 // require "calendarDatabase.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etown Spikeball Club Members Page</title>
     <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
-    <link rel="stylesheet" href="../stylesheets/calendar.css">
+    <link rel="stylesheet" href="../stylesheets/membersStyle.css">
 </head>
 
 <body>
@@ -27,7 +24,19 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
     <header>
         <h1 id="title">Upcoming Club Events</h1>
     </header>
-    <div class="tableDiv">
+
+    <!-- Search Bar -->
+    <div id="searchBar">
+        <form id="searchForm" action='search.php' method=post>
+            <input id="memberSearch" name="term" type="text" placeholder="Type a member name">
+            <input type= "submit" value="Search"> 
+            <!-- <div id="searchIcon">
+                <img src="http://localhost/cs310/Spikeball_Website/images/magnifying-glass.png" alt="Search Icon" title="Search Button" height="13px" width="13px">
+            </div> -->
+            <br>
+    </div>
+    </form>
+
     <table class="table table-bordered">
         <!-- Table Headers -->
         <thead>
@@ -50,27 +59,19 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
         // Loop over all members and send member info out as a table
         foreach($events as $event) {
         ?>
-
-        <tbody>
-            <tr>
-                <td class="name"> <?php echo"{$event["eventName"]}";?> </td>
-                <td class="name"> <?php echo"{$event["location"]}";?> </td>
-                <td class="date"> <?php echo"{$event["startDate"]}";?> </td>
-                <td class="date"> <?php echo"{$event["startTime"]}"."PM";?> </td>
-                <td class="text"> <?php echo"{$event["description"]}";?> </td>
-            </tr>
-        </tbody>
-
-        <?php
-        }
-        ?>
-    </table>
-    </div>
-    <!-- footer -->
-    <footer>
-        <p class="copyright">© 2022 Aiden Walmer + Alexander Fox @ CS310 - Elizabethtown College.</p>
-    </footer>
-
-</body>
-
-</html>
+        <html>
+            <tbody>
+                <tr>
+                    <td class="name"> <?php echo"{$event["eventName"]}";?> </td>
+                    <td class="name"> <?php echo"{$event["location"]}";?> </td>
+                    <td class="date"> <?php echo"{$event["startDate"]}";?> </td>
+                    <td class="date"> <?php echo"{$event["startTime"]}"."PM";?> </td>
+                    <td class="text"> <?php echo"{$event["description"]}";?> </td>
+                </tr>
+            </tbody>
+        </html>
+        </table>
+        </body>
+    <?php
+    }
+?>
