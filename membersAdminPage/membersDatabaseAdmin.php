@@ -65,10 +65,10 @@ if (isset($_POST['editMemberBtn'])) {
 }
 
 if (isset($_POST['addEventBtn'])) {
-    $eventName = $_POST["eventName"];
+    $eventName = $_POST["event"];
     $location = $_POST["location"];
-    $startDate = $_POST["startDate"];
-    $startTime = $_POST["startTime"];
+    $startDate = $_POST["date"];
+    $startTime = $_POST["time"];
     $description = $_POST["description"];
 
     $sql = "INSERT INTO events (eventName, location, startDate, startTime, description) VALUES (:e, :l, :s, :t, :d)";
