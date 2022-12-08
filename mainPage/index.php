@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etown Spikeball Club</title>
     <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
-    <link rel="stylesheet" href="spikeball_styles.css">
-    <script src="spikeball_function.js"></script>
+    <link rel="stylesheet" href="../stylesheets/spikeball_styles.css">
+    <script src="../scripts/spikeball_function.js"></script>
 </head>
 <body>
     <!-- header -->

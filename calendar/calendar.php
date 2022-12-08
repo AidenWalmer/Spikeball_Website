@@ -2,13 +2,8 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-// require "../membersAdminPage/membersDatabaseAdmin.php";
-// require "calendarDatabase.php";
 require "../includes/database_functions.php";
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +12,6 @@ require "../includes/database_functions.php";
     <title>Etown Spikeball Club Members Page</title>
     <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
     <link rel="stylesheet" href="calendar.css">
-    
     <!-- <script src="membersFunctionAdmin.js"></script> -->
 </head>
 
@@ -33,7 +27,11 @@ require "../includes/database_functions.php";
     <header>
         <h1 id="title">Upcoming Club Events</h1>
     </header>
-    <div class="tableDiv">
+
+    <!-- Search Bar for Whitespace! -->
+    <div id="searchBar">
+    </div>
+
     <table class="table table-bordered">
         <!-- Table Headers -->
         <thead>
@@ -56,27 +54,19 @@ require "../includes/database_functions.php";
         // Loop over all members and send member info out as a table
         foreach($events as $event) {
         ?>
-
-        <tbody>
-            <tr>
-                <td class="name"> <?php echo"{$event["eventName"]}";?> </td>
-                <td class="name"> <?php echo"{$event["location"]}";?> </td>
-                <td class="date"> <?php echo"{$event["startDate"]}";?> </td>
-                <td class="date"> <?php echo"{$event["startTime"]}"."PM";?> </td>
-                <td class="text"> <?php echo"{$event["description"]}";?> </td>
-            </tr>
-        </tbody>
-
-        <?php
-        }
-        ?>
-    </table>
-    </div>
-    <!-- footer -->
-    <footer>
-        <p class="copyright">© 2022 Aiden Walmer + Alexander Fox @ CS310 - Elizabethtown College.</p>
-    </footer>
-
-</body>
-
-</html>
+        <html>
+            <tbody>
+                <tr>
+                    <td class="name"> <?php echo"{$event["eventName"]}";?> </td>
+                    <td class="name"> <?php echo"{$event["location"]}";?> </td>
+                    <td class="date"> <?php echo"{$event["startDate"]}";?> </td>
+                    <td class="date"> <?php echo"{$event["startTime"]}"."PM";?> </td>
+                    <td class="text"> <?php echo"{$event["description"]}";?> </td>
+                </tr>
+            </tbody>
+        </html>
+        </table>
+        </body>
+    <?php
+    }
+?>

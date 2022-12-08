@@ -64,7 +64,7 @@ if (isset($_POST['editMemberBtn'])) {
     }
 }
 
-if (isset($_POST['addEventBtn'])) {
+if (isset($_POST['EventBtn'])) {
     $eventName = $_POST["event"];
     $location = $_POST["location"];
     $startDate = $_POST["date"];

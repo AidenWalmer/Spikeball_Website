@@ -8,9 +8,10 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
     $answer = explode(" ",$data);
     // print_r($answer);
     ?>
-        <style>
-        <?php include 'membersStyleAdmin.css'; ?> 
-        </style>
+    
+    <style>
+        <?php include '../stylesheets/membersStyleAdmin.css'; ?> 
+    </style>
 
     <head>
         <title>Etown Spikeball Search Members Page</title>
@@ -67,7 +68,7 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
     ?>  
         <!-- Table Elements -->
         <html>
-        <tbody>
+            <tbody>
                 <tr>
                     <td class="number"> <?php echo"{$member["id"]}";?> </td>
                     <td class="name"> <?php echo"{$member["nameFirst"]}"." "."{$member["nameLast"]}";?> </td>
@@ -77,7 +78,8 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
                 </tr>
             </tbody>
         </html>
-
+    </table>
+    </body>
     <?php
     }
 }
