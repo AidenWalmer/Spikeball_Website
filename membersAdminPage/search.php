@@ -9,7 +9,7 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
     // print_r($answer);
     ?>
         <style>
-        <?php include 'membersStyleAdmin.css'; ?> 
+        <?php include '../stylesheets/membersStyleAdmin.css'; ?> 
         </style>
 
     <head>
