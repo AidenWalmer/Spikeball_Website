@@ -148,7 +148,7 @@ footer {
 }
 
 /* Admin Buttons Attributes */
-#addBtn, #deleteBtn, #editBtn {
+#addBtn, #deleteBtn, #editBtn, #addEvent {
     width: 110px;
     padding: 4px;
     font-size: 14px;
@@ -166,6 +166,10 @@ footer {
 #deleteBtn {
     margin-left: 15px;
     margin-right: 15px;
+}
+
+#addEvent{
+    margin-left: 15px;
 }
 
 /* Admin Buttons Hover */
@@ -224,9 +228,25 @@ footer {
     box-shadow: 0px 0px 0px 2px #000;
     z-index: 1;     /* Show in front of previous page content */
 }
+/* add event form styling */
+#addEventDiv {
+    width: 400px;
+    height: 315px; 
+    background-color: rgb(234, 234, 234);
+
+    /* Center the div to the page */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px #000;
+    z-index: 1;     /* Show in front of previous page content */
+} 
 
 /* Popup Form Attributes */
-#addForm, #deleteForm, #editForm {
+#addForm, #deleteForm, #editForm, #addEventForm {
     padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
@@ -245,7 +265,7 @@ form>div {
 }
 
 /* ALL Form Div Header Attributes */
-#addDiv h2, #deleteDiv h2, #editDiv h2 {
+#addDiv h2, #deleteDiv h2, #editDiv h2 , #addEventDiv h2{
     text-align: center;
     margin: 0;
 }
