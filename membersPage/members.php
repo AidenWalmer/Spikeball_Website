@@ -12,8 +12,8 @@ require "../includes/database_functions.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etown Spikeball Club Members Page</title>
     <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
-    <link rel="stylesheet" href="membersStyle.css">
-    <script src="membersFunction.js"></script>
+    <link rel="stylesheet" href="stylesheets/membersStyle.css">
+    <script src="scripts/membersFunction.js"></script>
 
 </head>
 

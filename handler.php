@@ -3,19 +3,34 @@
 
 switch(@parse_url($_SERVER['REQUEST_URI'])['path']){
     case '/':
-        require 'index.html';
+        require 'mainPage/index.php';
         break;
     case '/index':
-        require 'index.html';
+        require 'mainPage/index.php';
         break;
     case '/index.html':
-        require 'index.html';
+        require 'mainPage/index.php';
         break;
-    case '/qq-insert.php':
-        require 'api/qq-insert.php';
+    case '/membersPage/members.php':
+        require 'membersPage/members.php';
         break;
-    case '/qq-select.php':
-        require 'api/qq-select.php';
+    case '/membersPage/search.php':
+        require '/membersPage/search.php';
+        break;
+    case '/loginPage/login.php':
+        require 'loginPage/login.php';
+        break;
+    case '/membersAdminPage/membersAdmin.php':
+        require 'membersAdminPage/membersAdmin.php';
+        break;
+    case '/membersAdminPage/search.php':
+        require '/membersAdminPage/search.php';
+        break;
+    case '/calender/calender.php':
+        require '/calender/calender.php';
+        break;
+    case '/mainPage/photoAPI.php':
+        require '/mainPage/photoAPI.php';
         break;
     default:
         http_response_code(404);
