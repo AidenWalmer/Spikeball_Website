@@ -2,8 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-require "../membersAdminPage/membersDatabaseAdmin.php";
-// require "calendarDatabase.php";
+require "../includes/database_functions.php";
 ?>
 
 <head>
@@ -25,17 +24,9 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
         <h1 id="title">Upcoming Club Events</h1>
     </header>
 
-    <!-- Search Bar -->
+    <!-- Search Bar for Whitespace! -->
     <div id="searchBar">
-        <form id="searchForm" action='search.php' method=post>
-            <input id="memberSearch" name="term" type="text" placeholder="Type a member name">
-            <input type= "submit" value="Search"> 
-            <!-- <div id="searchIcon">
-                <img src="http://localhost/cs310/Spikeball_Website/images/magnifying-glass.png" alt="Search Icon" title="Search Button" height="13px" width="13px">
-            </div> -->
-            <br>
     </div>
-    </form>
 
     <table class="table table-bordered">
         <!-- Table Headers -->

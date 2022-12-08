@@ -58,6 +58,7 @@ header {
     border: 1px solid black;
     padding: 5px; 
     margin-bottom: 20px;            /* Extra space between search bar and table */
+    min-height: 20px;
 }
 
 #searchForm {
