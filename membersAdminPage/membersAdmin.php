@@ -74,11 +74,11 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             </div>
             <div>
                 <label for="joinDate">Date Joined: </label>
-                <input id="joinDate" name="date" placeholder="2022/03/26" title="Please provide a date in YEAR/MON/DAY format." required>
+                <input id="joinDate" name="date" placeholder="YYYY/MM/DD" title="Please provide a date in YEAR/MON/DAY format." required>
             </div>
             <div>
             <label for="gradYear">Graduation Year: </label>
-            <input id="gradYear" name="grad" type="number" placeholder="2024">
+            <input id="gradYear" name="grad" type="number" placeholder="YYYY">
             </div>
             <div>
             <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
@@ -130,11 +130,11 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             </div>
             <div>
                 <label for="joinDate">Edit Join Date: </label>
-                <input id="joinDate" name="date" placeholder="2022/03/26" title="Please provide a date in YEAR/MON/DAY format." required>
+                <input id="joinDate" name="date" placeholder="YYYY/MM/DD" title="Please provide a date in YEAR/MON/DAY format." required>
             </div>
             <div>
             <label for="gradYear">Edit Grad Year: </label>
-            <input id="gradYear" name="grad" type="number" placeholder="2024">
+            <input id="gradYear" name="grad" type="number" placeholder="YYYY">
             </div>
             <div>
             <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
