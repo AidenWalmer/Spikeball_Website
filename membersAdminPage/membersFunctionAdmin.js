@@ -17,6 +17,9 @@ function init() {
     let logoutBtn = document.getElementById("logoutBtn");
     logoutBtn.addEventListener("click", logout);
 
+    let addEventBtn = document.getElementById("addEvent");
+    addEventBtn.addEventListener("click", addEvent);
+
     // Handled in HTML onclick="cancelForm()"
     // let cancelBtn = document.querySelector(".cancelBtn");
     // cancelBtn.addEventListener("click", cancelForm);
@@ -145,4 +148,33 @@ function cancelForm() {
 
 function logout() {
     window.location.href = "http://localhost/cs310/Spikeball_Website/membersAdminPage/logout.php";
+}
+
+//Events
+function addEvent() {
+    console.log("Adding Event");
+    // Darken the page
+    let header = document.querySelector("header");
+    header.classList.add("darken");
+    let searchBar = document.getElementById("searchBar");
+    searchBar.classList.add("darken");
+    let table = document.querySelector("table");
+    table.classList.add("darken");
+    let footer = document.querySelector("footer");
+    footer.classList.add("darken");
+    let adminBtns = document.getElementById("adminBtns");
+    adminBtns.classList.add("darken");
+    adminBtns.classList.add("disabled");
+    // Darken the background color
+    var style = document.createElement('style');
+    style.innerHTML = ` 
+    body {
+        background-image: linear-gradient(to top, #000034, rgb(96, 119, 149)); 
+    }
+    `;
+    document.head.appendChild(style);
+
+    // Show Add Member form
+    let addEventDiv = document.getElementById("addEventDiv");
+    addEventDiv.classList.remove("hidden");
 }

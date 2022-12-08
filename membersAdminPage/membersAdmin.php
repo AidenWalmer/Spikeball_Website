@@ -52,6 +52,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <button id="addBtn" name="addMemberBtn">Add Member</button>
         <button id="deleteBtn" name="deleteMemberBtn">Delete Member</button>
         <button id="editBtn" name="editMemberBtn">Edit Member</button>
+        <button id="addEvent" name="addEventBtn">Add Events</button>
     </div>
 
     <!-- Add Member Form -->
@@ -138,6 +139,38 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             <div>
             <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
             <input type="submit" class="submitBtn" name="editMemberBtn" value="SUBMIT">
+            </div>
+        </form>
+    </div>
+
+    <!-- Add Events Form -->
+    <div id="addEventDiv" class="hidden">
+        <form id="addForm" action="" method="post">
+            <h2>Add an Event</h2>
+            <BR>
+            <div>
+                <label for="eventName">Event Name: </label>
+                <input id="eventName" name="eventName" type="text" placeholder="Club Meeting" title="Please provide a title for the Event." autocomplete="off" required>
+            </div>
+            <div>
+                <label for="eventDescription">Description </label>
+                <input id="eventDescription" name="description" type="text" placeholder="Describe Event..." title="Please provide a description for your event." autocomplete="off"> 
+            </div>
+            <div>
+                <label for="eventLocation">Location: </label>
+                <input id="eventLocation" name="location" type="text" placeholder="Brinser Field" title="Please provide a location." autocomplete="off" required>
+            </div>
+            <div>
+                <label for="startDate">Start Date: </label>
+                <input id="startDate" name="startDate" placeholder="YYYY/MM/DD" title="Please provide a date in YEAR/MON/DAY format." required>
+            </div>
+            <div>
+                <label for="endDate">End Date: </label>
+                <input id="endDate" name="endDate" placeholder="YYYY/MM/DD" title="Please provide a date in YEAR/MON/DAY format." required>
+            </div>
+            <div>
+            <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
+            <input type="submit" class="submitBtn" name="addMemberBtn" value="SUBMIT">
             </div>
         </form>
     </div>

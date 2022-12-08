@@ -64,4 +64,22 @@ if (isset($_POST['editMemberBtn'])) {
     }
 }
 
+if (isset($_POST['addEventBtn'])) {
+    $eventName = $_POST["eventName"];
+    $location = $_POST["location"];
+    $startDate = $_POST["startDate"];
+    $endDate = $_POST["endDate"];
+    $description = $_POST["description"];
+
+    $sql = "INSERT INTO events (eventName, location, startDate, endDate, description) VALUES (:e, :l, :s, :n, :d)";
+    $params = [":e"=>$eventName, ":l"=>$location, ":s"=>$startdate, ":n"=>$endDate, ":d"=>$description];
+    $result = getDataFromSQL($sql, $params);
+
+    if (is_array($result)) {
+        echo "<script>alert('SUCCESS: Added new event to the event list!');</script>";
+    } else {
+        echo "<script>alert('ERROR: With creating a new event!');</script>";
+    }
+}
+
 ?>
