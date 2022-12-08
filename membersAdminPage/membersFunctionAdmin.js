@@ -136,6 +136,7 @@ function cancelForm() {
     document.getElementById("addForm").reset();
     document.getElementById("editForm").reset();
     document.getElementById("deleteForm").reset();
+    document.getElementById("addEventForm").reset();
 
     // Hide all Forms
     let addDiv = document.getElementById("addDiv");
@@ -144,6 +145,8 @@ function cancelForm() {
     deleteDiv.classList.add("hidden");
     let editDiv = document.getElementById("editDiv");
     editDiv.classList.add("hidden");
+    let addEventDiv = document.getElementById("addEventDiv");
+    addEventDiv.classList.add("hidden");
 }
 
 function logout() {

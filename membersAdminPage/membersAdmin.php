@@ -145,12 +145,12 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
 
     <!-- Add Events Form -->
     <div id="addEventDiv" class="hidden">
-        <form id="addForm" action="" method="post">
+        <form id="addEventForm" action="" method="post">
             <h2>Add an Event</h2>
             <BR>
             <div>
                 <label for="eventName">Event Name: </label>
-                <input id="eventName" name="eventName" type="text" placeholder="Club Meeting" title="Please provide a title for the Event." autocomplete="off" required>
+                <input id="eventName" name="event" type="text" placeholder="Club Meeting" title="Please provide a title for the Event." autocomplete="off" required>
             </div>
             <div>
                 <label for="eventDescription">Description </label>
@@ -162,11 +162,11 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             </div>
             <div>
                 <label for="startDate">Start Date: </label>
-                <input id="startDate" name="startDate" placeholder="YYYY/MM/DD" title="Please provide a date in YEAR/MON/DAY format." required>
+                <input id="startDate" name="date" placeholder="YYYY/MM/DD" title="Please provide a date in YEAR/MON/DAY format." required>
             </div>
             <div>
                 <label for="startTime">Start Time: </label>
-                <input id="startTime" name="startTime" placeholder="4:00" title="Please provide a Time in HH:MM format." required>
+                <input id="startTime" name="time" placeholder="4:00" title="Please provide a Time in HH:MM format." required>
             </div>
             <div>
             <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">

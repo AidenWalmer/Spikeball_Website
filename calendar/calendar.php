@@ -57,7 +57,7 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
                 <td class="name"> <?php echo"{$event["eventName"]}";?> </td>
                 <td class="name"> <?php echo"{$event["location"]}";?> </td>
                 <td class="date"> <?php echo"{$event["startDate"]}";?> </td>
-                <td class="date"> <?php echo"{$event["startTime"]}";?> </td>
+                <td class="date"> <?php echo"{$event["startTime"]}"."PM";?> </td>
                 <td class="text"> <?php echo"{$event["description"]}";?> </td>
             </tr>
         </tbody>
