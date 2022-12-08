@@ -52,7 +52,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <button id="addBtn" name="addMemberBtn">Add Member</button>
         <button id="deleteBtn" name="deleteMemberBtn">Delete Member</button>
         <button id="editBtn" name="editMemberBtn">Edit Member</button>
-        <button id="addEvent" name="addEventBtn">Add Events</button>
+        <button id="addEvent" name="addEventBtn">Add Event</button>
     </div>
 
     <!-- Add Member Form -->
@@ -170,7 +170,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             </div>
             <div>
             <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
-            <input type="submit" class="submitBtn" name="addMemberBtn" value="SUBMIT">
+            <input type="submit" class="submitBtn" name="addEventBtn" value="SUBMIT">
             </div>
         </form>
     </div>
