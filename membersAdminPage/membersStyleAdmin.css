@@ -148,7 +148,7 @@ footer {
 }
 
 /* Admin Buttons Attributes */
-#addBtn, #deleteBtn, #editBtn, #addEvent {
+#addBtn, #deleteBtn, #editBtn, #addEvent, #deleteEvent {
     width: 110px;
     padding: 4px;
     font-size: 14px;
@@ -163,14 +163,15 @@ footer {
 }
 
 /* Admin Buttons Space Between */
-#deleteBtn {
+/* #deleteBtn {
     margin-left: 15px;
     margin-right: 15px;
 }
 
 #addEvent{
     margin-left: 15px;
-}
+} */
+
 
 /* Admin Buttons Hover */
 #addBtn:hover, #deleteBtn:hover, #editBtn:hover {
@@ -245,8 +246,24 @@ footer {
     z-index: 1;     /* Show in front of previous page content */
 } 
 
+#deleteEventDiv {
+    width: 400px;
+    min-height: 200px; 
+    background-color: rgb(234, 234, 234);
+
+    /* Center the div to the page */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px #000;
+    z-index: 1;     /* Show in front of previous page content */
+}
+
 /* Popup Form Attributes */
-#addForm, #deleteForm, #editForm, #addEventForm {
+#addForm, #deleteForm, #editForm, #addEventForm, #deleteEventForm{
     padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;

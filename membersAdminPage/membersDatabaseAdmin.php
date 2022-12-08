@@ -82,4 +82,20 @@ if (isset($_POST['addEventBtn'])) {
     }
 }
 
+if (isset($_POST['deleteEventBtn'])) {
+    $name = $_POST["eventName"];
+    $date = $_POST["date"];
+    $time = $_POST["time"];
+
+    $sql = "DELETE FROM events WHERE eventName = :n and startDate = :d and startTime = :t";
+    $params = [":n"=>$name, ":d"=>$date, ":t"=>$time];
+    $result = getDataFromSQL($sql, $params);
+
+    if (is_array($result)) {
+        echo "<script>alert('SUCCESS: Deleted event from the event list!');</script>";
+    } else {
+        echo "<script>alert('ERROR: Invalid event or start date or start time');</script>";
+    }
+}
+
 ?>

@@ -53,6 +53,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <button id="deleteBtn" name="deleteMemberBtn">Delete Member</button>
         <button id="editBtn" name="editMemberBtn">Edit Member</button>
         <button id="addEvent" name="addEventBtn">Add Event</button>
+        <button id="deleteEvent" name="deleteEventBtn">Delete Event</button>
     </div>
 
     <!-- Add Member Form -->
@@ -171,6 +172,29 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             <div>
             <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
             <input type="submit" class="submitBtn" name="addEventBtn" value="SUBMIT">
+            </div>
+        </form>
+    </div>
+
+    <div id="deleteEventDiv" class="hidden">
+        <form id="deleteEventForm" action="" method="post">
+            <h2>Delete an Event</h2>
+            <BR>
+            <div>
+                <label for="eventNameInput">Event Name: </label>
+                <input id="eventNameInput" name="eventName" type="text"  placeholder="Club Meeting" title="Please provide the name of the event you wish to delete." autocomplete="off" required>
+            </div>
+            <div>
+                <label for="startDateInput">Start Date: </label>
+                <input id="startDateInput" name="date"   placeholder="YYYY/MM/DD"  title="Please provide a date in YEAR/MON/DAY format." required> 
+            </div>
+            <div>
+                <label for="startTimeInput">Start Time: </label>
+                <input id="startTimeInput" name="time"   placeholder="4:00"  title="Please provide a time in HH:MM format." required> 
+            </div>
+            <div>
+            <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">
+            <input type="submit" class="submitBtn" name="deleteEventBtn" value="SUBMIT">
             </div>
         </form>
     </div>

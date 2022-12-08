@@ -2,8 +2,9 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-require "../membersAdminPage/membersDatabaseAdmin.php";
+// require "../membersAdminPage/membersDatabaseAdmin.php";
 // require "calendarDatabase.php";
+require "../includes/database_functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +17,7 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
     <title>Etown Spikeball Club Members Page</title>
     <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
     <link rel="stylesheet" href="calendar.css">
+    
     <!-- <script src="membersFunctionAdmin.js"></script> -->
 </head>
 
@@ -25,6 +27,9 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
             <img src="http://localhost/cs310/Spikeball_Website/images/home-big.png" alt="home icon" title="Home Button" height="75px">
         </a>
     </div>
+    <!-- <div id="loginDiv">
+        <button id="loginBtn">Admin Login</button>
+    </div> -->
     <header>
         <h1 id="title">Upcoming Club Events</h1>
     </header>

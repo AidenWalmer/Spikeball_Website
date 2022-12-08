@@ -17,7 +17,7 @@ header {
   font-size: 25px;   
   padding: 1px;                   /* Extra blue space from top and bottom of Header */
   padding-top: 35px;
-  padding-bottom: 35px;           /* Space between title and search bar */ 
+  padding-bottom: 45px;           /* Space between title and search bar */ 
 } 
 
 /* Home Button Attributes */
@@ -34,6 +34,14 @@ header {
   color: #0F52BA;
   text-shadow: none;  
 }
+
+/* admin login button */
+/* #loginBtn {
+  position: absolute;
+  top:107px;
+  left: 20px;
+  display: inline;
+} */
 
 /* Back Button Attributes */
 /* #back {
