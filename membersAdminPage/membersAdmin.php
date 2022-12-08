@@ -165,8 +165,8 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
                 <input id="startDate" name="startDate" placeholder="YYYY/MM/DD" title="Please provide a date in YEAR/MON/DAY format." required>
             </div>
             <div>
-                <label for="endDate">End Date: </label>
-                <input id="endDate" name="endDate" placeholder="YYYY/MM/DD" title="Please provide a date in YEAR/MON/DAY format." required>
+                <label for="startTime">Start Time: </label>
+                <input id="startTime" name="startTime" placeholder="4:00" title="Please provide a Time in HH:MM format." required>
             </div>
             <div>
             <input type="submit" onclick="cancelForm()" class="cancelBtn" name="cancelBtn" value="CANCEL">

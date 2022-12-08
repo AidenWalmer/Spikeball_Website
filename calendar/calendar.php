@@ -35,8 +35,8 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
             <tr>
                 <th scope="col">EVENT</th>
                 <th scope="col">LOCATION</th>
-                <th scope="col">START</th>
-                <th scope="col">END</th>
+                <th scope="col">DATE</th>
+                <th scope="col">TIME</th>
                 <th scope="col">DESCRIPTION</th>
             </tr>
         </thead>
@@ -44,7 +44,7 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
         <!-- Table Elements -->
         <?php
         $eventID = 1;
-        $sql = "SELECT * FROM events WHERE startTime BETWEEN CURRENT_DATE and (CURRENT_DATE +7) ORDER BY startTime;";
+        $sql = "SELECT * FROM events WHERE startDate BETWEEN CURRENT_DATE and (CURRENT_DATE +7) ORDER BY startDate;";
         // $params = [":e"=>$eventID];
         // $events = getDataFromSQL($sql, $params);
         $events = getDataFromSQL($sql);
@@ -56,8 +56,8 @@ require "../membersAdminPage/membersDatabaseAdmin.php";
             <tr>
                 <td class="name"> <?php echo"{$event["eventName"]}";?> </td>
                 <td class="name"> <?php echo"{$event["location"]}";?> </td>
+                <td class="date"> <?php echo"{$event["startDate"]}";?> </td>
                 <td class="date"> <?php echo"{$event["startTime"]}";?> </td>
-                <td class="date"> <?php echo"{$event["endTime"]}";?> </td>
                 <td class="text"> <?php echo"{$event["description"]}";?> </td>
             </tr>
         </tbody>

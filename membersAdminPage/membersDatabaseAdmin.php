@@ -68,11 +68,11 @@ if (isset($_POST['addEventBtn'])) {
     $eventName = $_POST["eventName"];
     $location = $_POST["location"];
     $startDate = $_POST["startDate"];
-    $endDate = $_POST["endDate"];
+    $startTime = $_POST["startTime"];
     $description = $_POST["description"];
 
-    $sql = "INSERT INTO events (eventName, location, startDate, endDate, description) VALUES (:e, :l, :s, :n, :d)";
-    $params = [":e"=>$eventName, ":l"=>$location, ":s"=>$startdate, ":n"=>$endDate, ":d"=>$description];
+    $sql = "INSERT INTO events (eventName, location, startDate, startTime, description) VALUES (:e, :l, :s, :t, :d)";
+    $params = [":e"=>$eventName, ":l"=>$location, ":s"=>$startDate, ":t"=>$startTime, ":d"=>$description];
     $result = getDataFromSQL($sql, $params);
 
     if (is_array($result)) {
