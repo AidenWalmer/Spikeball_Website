@@ -8,9 +8,10 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
     $answer = explode(" ",$data);
     // print_r($answer);
     ?>
-        <style>
+
+    <style>
         <?php include '../stylesheets/membersStyle.css'; ?> 
-        </style>
+    </style>
 
     <head>
         <title>Etown Spikeball Search Members Page</title>
@@ -23,6 +24,7 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
                 <img src="http://localhost/cs310/Spikeball_Website/images/back-button.png" alt="back icon" title="Back Button" height="90px" color="white">
             </a>
         </div>
+
         <header>
             <h1 id="title">Search Members List</h1>
             <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
@@ -77,10 +79,12 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
                 </tr>
             </tbody>
         </html>
-
     <?php
-
     }
+    ?>
+    </table>
+    </body>
+<?php
 }
 ?>
 

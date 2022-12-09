@@ -20,9 +20,7 @@ require "../includes/database_functions.php";
             <img src="http://localhost/cs310/Spikeball_Website/images/home-big.png" alt="home icon" title="Home Button" height="75px">
         </a>
     </div>
-    <!-- <div id="loginDiv">
-        <button id="loginBtn">Admin Login</button>
-    </div> -->
+    
     <header>
         <h1 id="title">Upcoming Club Events</h1>
     </header>

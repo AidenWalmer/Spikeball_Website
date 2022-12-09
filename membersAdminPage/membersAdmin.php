@@ -182,7 +182,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             <BR>
             <div>
                 <label for="eventNameInput">Event Name: </label>
-                <input id="eventNameInput" name="eventName" type="text"  placeholder="Club Meeting" title="Please provide the name of the event you wish to delete." autocomplete="off" required>
+                <input id="eventNameInput" name="eventName" type="text" placeholder="Club Meeting" title="Please provide the name of the event you wish to delete." autocomplete="off" required>
             </div>
             <div>
                 <label for="startDateInput">Start Date: </label>

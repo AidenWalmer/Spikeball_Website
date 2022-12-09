@@ -27,6 +27,7 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
         
         <header>
             <h1 id="title">Search Members List</h1>
+            <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
         </header>
 
         <!-- Search Bar -->
@@ -78,9 +79,11 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
                 </tr>
             </tbody>
         </html>
-    </table>
-    </body>
     <?php
     }
+    ?>
+    </table>
+    </body>
+<?php
 }
 ?>
