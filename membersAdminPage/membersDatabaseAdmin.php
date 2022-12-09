@@ -6,7 +6,11 @@ require "includes/database_functions.php";
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
     // echo "You logged in!";
 } else {
-    header("location: ../mainPage/index.php");
+    ?>
+    <script>
+        window.location.href = "https://spikeball-club.uk.r.appspot.com";
+    </script>
+    <?php
 }
 
 // Adding a new member to the database

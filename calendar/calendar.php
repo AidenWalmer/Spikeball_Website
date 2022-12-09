@@ -9,7 +9,7 @@ require "includes/database_functions.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etown Spikeball Club Members Page</title>
+    <title>Events Page</title>
     <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
     <link rel="stylesheet" href="../stylesheets/calendar.css">
     <script src="../scripts/calendar.js"></script>
@@ -17,8 +17,8 @@ require "includes/database_functions.php";
 
 <body>
     <div id="home">
-        <a href="http://localhost/cs310/Spikeball_Website/mainPage/index.php">
-            <img src="http://localhost/cs310/Spikeball_Website/images/home-big.png" alt="home icon" title="Home Button" height="75px">
+        <a href="https://spikeball-club.uk.r.appspot.com">
+            <img src="../images/home-big.png" alt="home icon" title="Home Button" height="75px">
         </a>
     </div>
     

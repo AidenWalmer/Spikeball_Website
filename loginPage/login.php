@@ -3,7 +3,11 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
-    header("location: ../membersAdminPage/membersAdmin.php");
+    ?>
+    <script>
+        window.location.href = "https://spikeball-club.uk.r.appspot.com/membersAdminPage/membersAdmin.php";
+    </script>
+    <?php
 } 
 require "loginPass.php";
 ?>
@@ -22,8 +26,8 @@ require "loginPass.php";
 
 <body>
     <div class="home">
-        <a href="http://localhost/cs310/Spikeball_Website/mainPage/index.php">
-            <img src="http://localhost/cs310/Spikeball_Website/images/home-big.png" alt="home icon" title="Home Button" height="75px">
+        <a href="https://spikeball-club.uk.r.appspot.com">
+            <img src="../images/home-big.png" alt="home icon" title="Home Button" height="75px">
         </a>
     </div>
     <div id="main">
@@ -39,7 +43,7 @@ require "loginPass.php";
             <br>
             <div id="memberDiv">
                 <a id="member"
-                    href="http://localhost/cs310/Spikeball_Website/membersPage/members.php">
+                    href="https://spikeball-club.uk.r.appspot.com/membersPage/members.php">
                     Continue as a Club Member</a>
             </div>
             <input type="submit" id="loginBtn" name="loginBtn" value="LOGIN">

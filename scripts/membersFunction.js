@@ -7,5 +7,5 @@ function init() {
 }
 
 function toAdminLogin() {
-    window.location.href = "http://localhost/cs310/Spikeball_Website/loginPage/login.php";
+    window.location.href = "https://spikeball-club.uk.r.appspot.com/loginPage/login.php";
 }

@@ -29,8 +29,11 @@ switch(@parse_url($_SERVER['REQUEST_URI'])['path']){
     case '/membersAdminPage/search.php':
         require 'membersAdminPage/search.php';
         break;
-    case '/calender/calender.php':
-        require 'calender/calender.php';
+    case '/membersAdminPage/logout.php':
+        require 'membersAdminPage/logout.php';
+        break;
+    case '/calendar/calendar.php':
+        require 'calendar/calendar.php';
         break;
     default:
         http_response_code(404);

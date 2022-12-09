@@ -3,7 +3,11 @@
 $data = $_POST["term"];
 
 if (trim($data) == "") {    // If data is empty or includes any number of whitespaces
-    header("location: members.php");
+    ?>
+    <script>
+        window.location.href = "https://spikeball-club.uk.r.appspot.com/membersPage/members.php";
+    </script>
+    <?php
 } else {
     $answer = explode(" ",$data);
     // print_r($answer);
@@ -17,8 +21,8 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
 
     <body>
         <div id="back">
-            <a href="http://localhost/cs310/Spikeball_Website/membersPage/members.php">
-                <img src="http://localhost/cs310/Spikeball_Website/images/back-button.png" alt="back icon" title="Back Button" height="90px" color="white">
+            <a href="https://spikeball-club.uk.r.appspot.com/membersPage/members.php">
+                <img src="../images/back-button.png" alt="back icon" title="Back Button" height="90px" color="white">
             </a>
         </div>
 

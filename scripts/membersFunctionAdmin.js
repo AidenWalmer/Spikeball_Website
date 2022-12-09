@@ -156,7 +156,7 @@ function cancelForm() {
 }
 
 function logout() {
-    window.location.href = "http://localhost/cs310/Spikeball_Website/membersAdminPage/logout.php";
+    window.location.href = "https://spikeball-club.uk.r.appspot.com/membersAdminPage/logout.php";
 }
 
 //Events

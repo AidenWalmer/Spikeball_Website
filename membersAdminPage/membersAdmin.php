@@ -7,7 +7,11 @@ require "membersDatabaseAdmin.php";
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
     // echo "You logged in!";
 } else {
-    header("location: ../mainPage/index.php");
+    ?>
+    <script>
+        window.location.href = "https://spikeball-club.uk.r.appspot.com";
+    </script>
+    <?php
 }
 ?>
 
@@ -26,8 +30,8 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
 
 <body>
     <div id="home">
-        <a href="http://localhost/cs310/Spikeball_Website/mainPage/index.php">
-            <img src="http://localhost/cs310/Spikeball_Website/images/home-big.png" alt="home icon" title="Home Button" height="75px">
+        <a href="https://spikeball-club.uk.r.appspot.com">
+            <img src="../images/home-big.png" alt="home icon" title="Home Button" height="75px">
         </a>
     </div>
     <header>

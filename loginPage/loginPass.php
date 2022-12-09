@@ -42,19 +42,31 @@ if (isset($_POST['loginBtn'])) {
             echo "Logged In!";
             // $_SESSION["userid"]=$result[0]["userid"];
             $_SESSION["LoginStatus"]="YES";
-            header("location: ../membersAdminPage/membersAdmin.php");
+            ?>
+            <script>
+                window.location.href = "https://spikeball-club.uk.r.appspot.com/membersAdminPage/membersAdmin.php";
+            </script>
+            <?php
             $_SESSION["error"] = "";
             exit;
         } else {
             // $_SESSION["userid"]="";
             $_SESSION["LoginStatus"]="NO";
-            header("location: login.php");
+            ?>
+            <script>
+                window.location.href = "https://spikeball-club.uk.r.appspot.com/loginPage/login.php";
+            </script>
+            <?php
             $_SESSION["error"] = "Incorrect Username or Password!"."<hr id='errorHR'>";
             exit;
         }
     } else {
         $_SESSION["LoginStatus"]="NO";
-        header("location: login.php");
+        ?>
+        <script>
+            window.location.href = "https://spikeball-club.uk.r.appspot.com/loginPage/login.php";
+        </script>
+        <?php
         $_SESSION["error"] = "Incorrect Username or Password!"."<hr id='errorHR'>";
     }
 }
