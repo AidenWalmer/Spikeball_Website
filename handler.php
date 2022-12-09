@@ -11,9 +11,12 @@ switch(@parse_url($_SERVER['REQUEST_URI'])['path']){
     case '/index.html':
         require 'mainPage/index.php';
         break;
+    case '/mainPage/photoAPI.php':
+        require '/mainPage/photoAPI.php';
+        break;
     case '/membersPage/members.php':
         require 'membersPage/members.php';
-        break;
+        break; 
     case '/membersPage/search.php':
         require '/membersPage/search.php';
         break;
@@ -28,9 +31,6 @@ switch(@parse_url($_SERVER['REQUEST_URI'])['path']){
         break;
     case '/calender/calender.php':
         require '/calender/calender.php';
-        break;
-    case '/mainPage/photoAPI.php':
-        require '/mainPage/photoAPI.php';
         break;
     default:
         http_response_code(404);
