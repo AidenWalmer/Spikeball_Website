@@ -11,6 +11,10 @@ header {
     padding-top: 35px;                /* Space between top of page and title */
 }
 
+footer {
+    margin-top: auto;
+  }
+
 /* Title Attributes */
 #title {
     background-color: #0F52BA;  

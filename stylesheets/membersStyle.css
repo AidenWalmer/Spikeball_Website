@@ -18,6 +18,10 @@ header {
     padding-bottom: 35px;           /* Space between title and search bar */ 
 } 
 
+footer {
+    margin-top: auto;
+  }
+
 /* Home Button Attributes */
 #home {
     position: absolute;
