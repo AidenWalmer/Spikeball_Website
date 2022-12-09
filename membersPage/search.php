@@ -10,12 +10,13 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
     ?>
 
     <style>
-        <?php include '../stylesheets/membersStyle.css'; ?> 
+        <?php include '../stylesheets/calendar.css'; ?> 
     </style>
 
     <head>
         <title>Etown Spikeball Search Members Page</title>
         <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
+        <link rel="stylesheet" href="../stylesheets/calendar.css">
     </head>
 
     <body>
