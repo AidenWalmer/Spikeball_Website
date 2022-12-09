@@ -6,5 +6,5 @@ function init(){
 }
 
 function loadfunc(){
-    window.location.href = "http://localhost/cs310/Spikeball_Website/membersAdminPage/membersAdmin.php";
+    window.location.href = "http://localhost/cs310/Spikeball_Website/loginPage/login.php";
 }
