@@ -12,6 +12,7 @@ require "includes/database_functions.php";
     <title>Etown Spikeball Club Members Page</title>
     <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
     <link rel="stylesheet" href="../stylesheets/calendar.css">
+    <script src="../scripts/calendar.js"></script>
 </head>
 
 <body>
@@ -27,6 +28,7 @@ require "includes/database_functions.php";
 
     <!-- Search Bar for Whitespace! -->
     <div id="searchBar">
+        <button id="test">Add Events</button>
     </div>
 
     <table class="table table-bordered">
