@@ -87,3 +87,7 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
 <?php
 }
 ?>
+
+<footer>
+        <p class="copyright">© 2022 Aiden Walmer + Alexander Fox @ CS310 - Elizabethtown College.</p>
+</footer>
