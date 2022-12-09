@@ -53,6 +53,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <button id="deleteBtn" name="deleteMemberBtn">Delete Member</button>
         <button id="editBtn" name="editMemberBtn">Edit Member</button>
         <button id="addEvent" name="addEventBtn">Add Event</button>
+        <button id="deleteEvent" name="deleteEventBtn">Delete Event</button>
     </div>
 
     <!-- Add Member Form -->

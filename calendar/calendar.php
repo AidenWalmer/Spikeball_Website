@@ -11,7 +11,7 @@ require "../includes/database_functions.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etown Spikeball Club Members Page</title>
     <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
-    <link rel="stylesheet" href="../stylesheets/membersStyle.css">
+    <link rel="stylesheet" href="../stylesheets/calendar.css">
 </head>
 
 <body>
@@ -63,9 +63,14 @@ require "../includes/database_functions.php";
                     <td class="text"> <?php echo"{$event["description"]}";?> </td>
                 </tr>
             </tbody>
+
+            <?php
+    }
+?>
         </html>
         </table>
         </body>
-    <?php
-    }
-?>
+        <!-- footer -->
+    <footer>
+        <p class="copyright">© 2022 Aiden Walmer + Alexander Fox @ CS310 - Elizabethtown College.</p>
+    </footer>
