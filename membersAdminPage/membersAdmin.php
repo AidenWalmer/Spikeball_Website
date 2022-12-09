@@ -53,6 +53,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <button id="deleteBtn" name="deleteMemberBtn">Delete Member</button>
         <button id="editBtn" name="editMemberBtn">Edit Member</button>
         <button id="addEvent" name="addEventBtn">Add Event</button>
+        <button id="deleteEvent" name="deleteEventBtn">Delete Event</button>
     </div>
 
     <!-- Add Member Form -->
@@ -181,7 +182,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             <BR>
             <div>
                 <label for="eventNameInput">Event Name: </label>
-                <input id="eventNameInput" name="eventName" type="text"  placeholder="Club Meeting" title="Please provide the name of the event you wish to delete." autocomplete="off" required>
+                <input id="eventNameInput" name="eventName" type="text" placeholder="Club Meeting" title="Please provide the name of the event you wish to delete." autocomplete="off" required>
             </div>
             <div>
                 <label for="startDateInput">Start Date: </label>
