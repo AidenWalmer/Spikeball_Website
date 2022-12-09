@@ -26,7 +26,7 @@ else {
 
 function get_list_from_file() {
     // Read file as an array
-    $contents = file_get_contents("clubAlbum.json");
+    $contents = file_get_contents("mainPage/clubAlbum.json");
     $photos = json_decode($contents, true);
 
     // Return the associative array

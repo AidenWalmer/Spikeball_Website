@@ -54,7 +54,7 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
 
     <?php
 
-    include "../includes/database_functions.php";
+    include "includes/database_functions.php";
     //send a SQL statement and get results in to teams
     $sql = "SELECT * FROM members where nameFirst LIKE :term OR nameLast LIKE :term OR CONCAT(nameFirst, ' ', nameLast) LIKE :term ORDER BY id, nameFirst, nameLast";
     $params = [":term"=>$data."%"];
