@@ -125,14 +125,14 @@ body {
 #calendar-left {
     width:50px;
     position: relative;
-    right: 75px;
+    right: 65px;
     bottom: 50px;
 }
 
 #calendar-right {
     width:50px;
     position: relative;
-    left: 75px;
+    left: 65px;
     bottom: 50px;
 }
 
@@ -140,11 +140,11 @@ body {
     /* For mobile phones: */
     header {
         font-size: 14px;
-      }
+    }
     header div.row {
         width: 100%;
         font-size: 12px;
-      }
+    }
     .basic_info {
       width: 90%;
       font-size: 13px;
@@ -152,6 +152,14 @@ body {
     footer {
         padding: 15px;
         font-size: 13px;
+    }
+    #calendar-left {
+        width: 45px;
+        right: 35px
+    }
+    #calendar-right {
+        width: 45px;
+        left: 35px;
     }
 }
 

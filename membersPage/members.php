@@ -48,7 +48,7 @@ require "includes/database_functions.php";
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">NAME</th>
-                <th scope="col">START DATE</th>
+                <th scope="col">DATE JOINED</th>
                 <th scope="col">GRAD</th>
                 <th scope="col">STUDENT EMAIL</th>
             </tr>

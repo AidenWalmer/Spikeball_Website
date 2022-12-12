@@ -166,7 +166,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
                 <input id="eventLocation" name="location" type="text" placeholder="Brinser Field" title="Please provide a location." autocomplete="off" required>
             </div>
             <div>
-                <label for="startDate">Start Date: </label>
+                <label for="startDate">Date Joined: </label>
                 <input id="startDate" name="date" placeholder="YYYY/MM/DD" title="Please provide a date in YEAR/MON/DAY format." required>
             </div>
             <div>
@@ -189,7 +189,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
                 <input id="eventNameInput" name="eventName" type="text" placeholder="Club Meeting" title="Please provide the name of the event you wish to delete." autocomplete="off" required>
             </div>
             <div>
-                <label for="startDateInput">Start Date: </label>
+                <label for="startDateInput">Date Joined: </label>
                 <input id="startDateInput" name="date"   placeholder="YYYY/MM/DD"  title="Please provide a date in YEAR/MON/DAY format." required> 
             </div>
             <div>
@@ -210,7 +210,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">NAME</th>
-                <th scope="col">START DATE</th>
+                <th scope="col">DATE JOINED</th>
                 <th scope="col">GRAD</th>
                 <th scope="col">STUDENT EMAIL</th>
             </tr>
