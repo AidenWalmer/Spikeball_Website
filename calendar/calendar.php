@@ -71,6 +71,6 @@ require "includes/database_functions.php";
         </table>
         </body>
         <!-- footer -->
-    <footer>
+    <!-- <footer>
         <p class="copyright">© 2022 Aiden Walmer + Alexander Fox @ CS310 - Elizabethtown College.</p>
-    </footer>
+    </footer> -->
