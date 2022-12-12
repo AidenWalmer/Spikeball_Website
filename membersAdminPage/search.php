@@ -14,7 +14,7 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
     ?>
 
     <head>
-        <title>Etown Spikeball Search Members Page</title>
+        <title>Etown Spikeball Searched Members Page</title>
         <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
         <link rel="stylesheet" href="../stylesheets/calendar.css">
     </head>
@@ -27,7 +27,7 @@ if (trim($data) == "") {    // If data is empty or includes any number of whites
         </div>
         
         <header>
-            <h1 id="title">Search Members List</h1>
+            <h1 id="title">Searched List</h1>
             <link rel="Etown Spikeball Club Icon" href="../images/Spikeball-ball.png">
         </header>
 

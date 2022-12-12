@@ -135,38 +135,42 @@ footer {
 }
 
 /* Resizing for mobile phones: */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
     header {
         font-size: 14px;
         padding-bottom: 30px;
-      }
-
+    }
     #title {
         margin-left: 0%;
     }
-
-    .home img {
+    #home {
         position: absolute;
-        top: -15px;
-        left: -15px;
-        max-width: 50px;
+        top: 20px;
+        left: 15px;
+        max-width: 30px;
+        height: 30px;
+    }
+    #home img {
+        width: 50px;
         height: 50px;
     }
-
+    #loginBtn {
+        /* height: 20px; */
+        font-size: 8px;
+        left: 8px;
+    }
     #searchBar {
         font-size: 14px;
-        padding: 2px; 
+        padding: 2px;
+        padding-left: 20px;
       }
-
     input {
         font-size: 12px;
     }
-
     table {
       width: 80%;
       font-size: 14px;
     }
-    
     footer {
         font-size: 12px;
     }

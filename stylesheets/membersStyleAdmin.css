@@ -153,7 +153,7 @@ footer {
 
 /* Admin Buttons Attributes */
 #addBtn, #deleteBtn, #editBtn, #addEvent, #deleteEvent {
-    width: 110px;
+    width: 120px;
     padding: 4px;
     font-size: 14px;
     text-align: center;
@@ -330,38 +330,45 @@ form>div {
 }
 
 /* Resizing for mobile phones: */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
     header {
         font-size: 14px;
         padding-bottom: 30px;
-      }
-
+    }
     #title {
         margin-left: 0%;
     }
-
-    .home img {
+    #home {
         position: absolute;
-        top: -15px;
-        left: -15px;
-        max-width: 50px;
+        top: 20px;
+        left: 15px;
+        max-width: 30px;
+        height: 30px;
+    }
+    #home img {
+        width: 50px;
         height: 50px;
     }
-
+    #logoutBtn {
+        /* height: 20px; */
+        font-size: 12px;
+        left: 13px;
+    }
     #searchBar {
         font-size: 14px;
-        padding: 2px; 
+        padding: 2px;
+        padding-left: 20px;
       }
-
+    #addBtn, #deleteBtn, #editBtn, #addEvent, #deleteEvent {
+        margin-bottom: 5px;
+    }
     input {
         font-size: 12px;
     }
-
     table {
       width: 80%;
       font-size: 14px;
     }
-    
     footer {
         font-size: 12px;
     }

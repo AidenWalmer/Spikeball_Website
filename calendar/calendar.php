@@ -23,7 +23,7 @@ require "includes/database_functions.php";
     </div>
     
     <header>
-        <h1 id="title">Upcoming Club Events</h1>
+        <h1 id="title">Club Events</h1>
     </header>
 
     <!-- Search Bar for Whitespace! -->

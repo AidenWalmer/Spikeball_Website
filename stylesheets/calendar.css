@@ -137,38 +137,48 @@ footer {
 }
 
 /* Resizing for mobile phones: */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   header {
       font-size: 14px;
       padding-bottom: 30px;
-    }
-
+  }
   #title {
       margin-left: 0%;
   }
-
-  .home img {
-      position: absolute;
-      top: -15px;
-      left: -15px;
-      max-width: 50px;
+  #home {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    max-width: 30px;
+    height: 30px;
+  }
+  #home img {
+      width: 50px;
       height: 50px;
   }
-
+  title {
+    font-size: 14px;
+  }
+  #back {
+      position: absolute;
+      top: 25px;
+      left: 15px;
+  }
+  #back img {
+      width: 50px;
+      height: 50px;
+  }
   #searchBar {
       font-size: 14px;
       padding: 2px; 
-    }
-
+  }
   input {
       font-size: 12px;
   }
-
   table {
     width: 80%;
     font-size: 14px;
   }
-  
   footer {
       font-size: 12px;
   }
