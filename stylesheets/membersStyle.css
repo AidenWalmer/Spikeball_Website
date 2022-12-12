@@ -11,10 +11,10 @@ header {
     text-align: center;
     color: white;
     background-color: #0F52BA;
-    text-shadow: 1px 1px black;     
+    text-shadow: 1px 1px black; 
+    width: 100%;    
     font-size: 25px;   
-    padding: 1px;                   /* Extra blue space from top and bottom of Header */
-    padding-top: 35px;
+    padding-top: 35px;              /* Extra blue space from top and bottom of Header */
     padding-bottom: 35px;           /* Space between title and search bar */ 
 } 
 
@@ -60,7 +60,8 @@ footer {
     text-align: center;
     background-color: white;
     border: 1px solid black;
-    padding: 5px; 
+    padding-top: 5px; 
+    padding-bottom: 5px;
     margin-bottom: 20px;            /* Extra space between search bar and table */
     min-height: 20px;
 }

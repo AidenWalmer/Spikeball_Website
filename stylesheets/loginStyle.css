@@ -79,12 +79,12 @@ a:hover {
     font-weight: bold; 
     text-align: center;
 
-    border: 0px; 
-    border-radius: 18px;
+    border: 2px solid black;
+    border-radius: 2em;
 
-    outline: 2px solid black;
+    /* outline: 2px solid black;
     transition: outline-offset 200ms ease;
-    outline-offset: -2px; 
+    outline-offset: -2px;  */
 
     width: 250px;
     padding: 10px;
@@ -100,9 +100,9 @@ a:hover {
 } 
 
 /* More Button Modifyers */
-#loginBtn:focus {
+/* #loginBtn:focus {
     outline-offset: 2px;
-}
+} */
 
 /* Error Div Attributes */
 #errorDiv {
