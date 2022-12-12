@@ -79,7 +79,7 @@ a:hover {
     font-weight: bold; 
     text-align: center;
 
-    border: 2px solid black; 
+    border: 0px; 
     border-radius: 18px;
 
     outline: 2px solid black;
