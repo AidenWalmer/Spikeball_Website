@@ -66,10 +66,6 @@ footer {
     min-height: 20px;
 }
 
-#searchForm {
-    margin-bottom: 0px;
-}
-
 /* Search Button Attributes */
 #searchIcon {
     display: inline;

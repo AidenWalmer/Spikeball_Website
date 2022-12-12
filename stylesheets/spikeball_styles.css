@@ -1,4 +1,5 @@
 body {
+    margin: 0%;       /* Eliminates the small white border that surrounds the page */
     font-family: 'Sabon', sans-serif;
     /* font-family: Helvetica, Arial, sans-serif; */
 }
@@ -116,10 +117,6 @@ footer {
     padding: 15px;
     background-color: #000080;
     color: white;
-}
-
-body {
-    margin: 0%;       /* Eliminates the small white border that surrounds the page */
 }
 
 #calendar-left {

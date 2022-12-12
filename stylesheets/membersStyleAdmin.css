@@ -65,10 +65,6 @@ footer {
     margin-bottom: 20px;            /* Extra space between search bar and table */
 }
 
-#searchForm {
-    margin-bottom: 0px;
-}
-
 /* Search Button Attributes */
 #searchIcon {
     display: inline;
